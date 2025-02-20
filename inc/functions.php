@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) {
 }
 
 //FUNC: Check HPOS status
-function wac_check_hpos_status() {
+function ip_woo_check_hpos_status() {
     if (class_exists('\Automattic\WooCommerce\Utilities\OrderUtil') && \Automattic\WooCommerce\Utilities\OrderUtil::custom_orders_table_usage_is_enabled()) {
         return 'HPOS';
     } else {
@@ -14,121 +14,121 @@ function wac_check_hpos_status() {
 }
 
 //FUNC: Check count attributes
-function wac_count_attributes() {
+function ip_woo_count_attributes() {
     global $wpdb;
     $count = $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}woocommerce_attribute_taxonomies");
     return $count ? intval($count) : 0;
 }
 
 //FUNC: Function to count attributes that are Public (attribute_public = 1)
-function wac_count_archived_attributes() {
+function ip_woo_count_archived_attributes() {
     global $wpdb;
     return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}woocommerce_attribute_taxonomies WHERE attribute_public = 1");
 }
 
 //FUNC: Function to count all product tags
-function wac_count_product_tags() {
+function ip_woo_count_product_tags() {
     global $wpdb;
     return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}term_taxonomy WHERE taxonomy = 'product_tag'");
 }
 
 //FUNC: Function to count all coupons in WooCommerce
-function wac_count_coupons() {
+function ip_woo_count_coupons() {
     global $wpdb;
     return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}posts WHERE post_type = 'shop_coupon'");
 }
 
 //FUNC: Function to count orders in HPOS
-function wac_count_orders_hpos() {
+function ip_woo_count_orders_hpos() {
     global $wpdb;
     return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}wc_orders");
 }
 
 //FUNC: Function to count orders in pre-HPOS
-function wac_count_orders_pre_hpos() {
+function ip_woo_count_orders_pre_hpos() {
     global $wpdb;
     return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}posts WHERE post_type = 'shop_order' AND ID NOT IN (SELECT post_id FROM {$wpdb->prefix}wc_orders)");
 }
 
 //FUNC: Function to count order notes
-function wac_count_order_notes() {
+function ip_woo_count_order_notes() {
     global $wpdb;
     return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}comments WHERE comment_type = 'order_note'");
 }
 
 //FUNC: Function to count trashed products
-function wac_count_trashed_products() {
+function ip_woo_count_trashed_products() {
     global $wpdb;
     return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}posts WHERE post_type = 'product' AND post_status = 'trash'");
 }
 
 //FUNC: Count Products
-function wac_count_products() {
+function ip_woo_count_products() {
     global $wpdb;
     return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}posts WHERE post_type = 'product'");
 }
 
 //FUNC: Count Categories
-function wac_count_product_categories() {
+function ip_woo_count_product_categories() {
     global $wpdb;
     return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}term_taxonomy WHERE taxonomy = 'product_cat'");
 }
 
 //FUNC: Output Info notices
-function wac_admin_page() {
-    if (isset($_POST['wac_delete_attributes'])) {
-        wac_delete_attributes();
+function ip_woo_admin_page() {
+    if (isset($_POST['ip_woo_delete_attributes'])) {
+        ip_woo_delete_attributes();
         echo '<div class="updated"><p>' . __('Product attributes deleted!', 'ip-woo-cleaner') . '</p></div>';
     }
-    if (isset($_POST['wac_set_attributes_not_archives'])) {
-        wac_set_attributes_not_archives();
+    if (isset($_POST['ip_woo_set_attributes_not_archives'])) {
+        ip_woo_set_attributes_not_archives();
         echo '<div class="updated"><p>' . __('Product attributes set to not Public!', 'ip-woo-cleaner') . '</p></div>';
     }
-    if (isset($_POST['wac_delete_tags'])) {
-        wac_delete_tags();
+    if (isset($_POST['ip_woo_delete_tags'])) {
+        ip_woo_delete_tags();
         echo '<div class="updated"><p>' . __('Product tags deleted!', 'ip-woo-cleaner') . '</p></div>';
     }
-      if (isset($_POST['wac_delete_product_categories'])) {
-        wac_delete_product_categories();
+      if (isset($_POST['ip_woo_delete_product_categories'])) {
+        ip_woo_delete_product_categories();
         echo '<div class="updated"><p>' . __('Product categories deleted!', 'ip-woo-cleaner') . '</p></div>';
     }
-    if (isset($_POST['wac_delete_products'])) {
-        wac_delete_products();
+    if (isset($_POST['ip_woo_delete_products'])) {
+        ip_woo_delete_products();
         echo '<div class="updated"><p>' . __('Products deleted!', 'ip-woo-cleaner') . '</p></div>';
     }
-    if (isset($_POST['wac_delete_orders_hpos'])) {
-        wac_delete_orders_hpos();
+    if (isset($_POST['ip_woo_delete_orders_hpos'])) {
+        ip_woo_delete_orders_hpos();
         echo '<div class="updated"><p>' . __('All orders (HPOS) deleted!', 'ip-woo-cleaner') . '</p></div>';
     }
-    if (isset($_POST['wac_delete_orders_pre_hpos'])) {
-        wac_delete_orders_pre_hpos();
+    if (isset($_POST['ip_woo_delete_orders_pre_hpos'])) {
+        ip_woo_delete_orders_pre_hpos();
         echo '<div class="updated"><p>' . __('All orders (pre-HPOS) deleted!', 'ip-woo-cleaner') . '</p></div>';
     }
-    if (isset($_POST['wac_delete_products_trashed'])) {
-        wac_delete_products_trashed();
+    if (isset($_POST['ip_woo_delete_products_trashed'])) {
+        ip_woo_delete_products_trashed();
         echo '<div class="updated"><p>' . __('All trashed products deleted!', 'ip-woo-cleaner') . '</p></div>';
     }
-    if (isset($_POST['wac_delete_coupons'])) {
-        wac_delete_coupons();
+    if (isset($_POST['ip_woo_delete_coupons'])) {
+        ip_woo_delete_coupons();
         echo '<div class="updated"><p>' . __('All coupons deleted!', 'ip-woo-cleaner') . '</p></div>';
     }
-    if (isset($_POST['wac_delete_orders_notes'])) {
-        wac_delete_orders_notes();
+    if (isset($_POST['ip_woo_delete_orders_notes'])) {
+        ip_woo_delete_orders_notes();
         echo '<div class="updated"><p>' . __('All order notes deleted!', 'ip-woo-cleaner') . '</p></div>';
     }
 
     //Variables
-    $hpos_status = wac_check_hpos_status();
-    $attribute_count = wac_count_attributes(); // Get the number of attributes
-    $archived_attribute_count = wac_count_archived_attributes(); // How many of them are archived
-    $product_tags_count = wac_count_product_tags(); // Number of product tags
-    $coupons_count = wac_count_coupons(); // Number of coupons
-    $orders_hpos_count = wac_count_orders_hpos(); // Number of orders in HPOS
-    $orders_pre_hpos_count = wac_count_orders_pre_hpos(); // Number of orders in pre-HPOS
-    $order_notes_count = wac_count_order_notes(); // Number of order notes
-    $trashed_product_count = wac_count_trashed_products(); // Get the number of trashed products
-    $product_count = wac_count_products(); // Count Products
-    $product_category_count = wac_count_product_categories(); // Count Product Categories
+    $hpos_status = ip_woo_check_hpos_status();
+    $attribute_count = ip_woo_count_attributes(); // Get the number of attributes
+    $archived_attribute_count = ip_woo_count_archived_attributes(); // How many of them are archived
+    $product_tags_count = ip_woo_count_product_tags(); // Number of product tags
+    $coupons_count = ip_woo_count_coupons(); // Number of coupons
+    $orders_hpos_count = ip_woo_count_orders_hpos(); // Number of orders in HPOS
+    $orders_pre_hpos_count = ip_woo_count_orders_pre_hpos(); // Number of orders in pre-HPOS
+    $order_notes_count = ip_woo_count_order_notes(); // Number of order notes
+    $trashed_product_count = ip_woo_count_trashed_products(); // Get the number of trashed products
+    $product_count = ip_woo_count_products(); // Count Products
+    $product_category_count = ip_woo_count_product_categories(); // Count Product Categories
     ?>
 
         <!-- HTML: Output content for the page -->
@@ -146,7 +146,7 @@ function wac_admin_page() {
 }
 
 //SQL: Function to delete attributes
-function wac_delete_attributes() {
+function ip_woo_delete_attributes() {
     global $wpdb;
     
     $wpdb->query("DELETE FROM wp_terms WHERE term_id IN (SELECT term_id FROM wp_term_taxonomy WHERE taxonomy LIKE 'pa_%')");
@@ -158,14 +158,14 @@ function wac_delete_attributes() {
 }
 
 //SQL: Function to set attributes as non-archive
-function wac_set_attributes_not_archives() {
+function ip_woo_set_attributes_not_archives() {
     global $wpdb;
     
     $wpdb->query("UPDATE wp_woocommerce_attribute_taxonomies SET attribute_public = '0' WHERE attribute_public = '1'");
 }
 
 //SQL: Function to delete tags
-function wac_delete_tags() {
+function ip_woo_delete_tags() {
     global $wpdb;
     
     $wpdb->query("DELETE FROM wp_terms WHERE term_id IN (SELECT term_id FROM wp_term_taxonomy WHERE taxonomy = 'product_tag')");
@@ -174,7 +174,7 @@ function wac_delete_tags() {
 }
 
 //SQL: Function to delete Products
-function wac_delete_products() {
+function ip_woo_delete_products() {
     global $wpdb;
 
     // Видалення зв'язків термінів із товарами
@@ -197,7 +197,7 @@ function wac_delete_products() {
 }
 
 //SQL: Function to delete Product Categories
-function wac_delete_product_categories() {
+function ip_woo_delete_product_categories() {
     global $wpdb;
 
     // Видалення метаданих термінів для категорій товарів
@@ -219,7 +219,7 @@ function wac_delete_product_categories() {
 
 
 //SQL: Function to delete all orders (HPOS)
-function wac_delete_orders_hpos() {
+function ip_woo_delete_orders_hpos() {
     global $wpdb;
 
     $wpdb->query("DELETE FROM wp_wc_orders_meta");
@@ -231,7 +231,7 @@ function wac_delete_orders_hpos() {
 }
 
 //SQL: Function to delete all orders (pre-HPOS)
-function wac_delete_orders_pre_hpos() {
+function ip_woo_delete_orders_pre_hpos() {
     global $wpdb;
 
     $wpdb->query("DELETE FROM wp_woocommerce_order_itemmeta");
@@ -243,7 +243,7 @@ function wac_delete_orders_pre_hpos() {
 }
 
 //SQL: Function to delete all products in the trash
-function wac_delete_products_trashed() {
+function ip_woo_delete_products_trashed() {
     global $wpdb;
 
     $wpdb->query("DELETE FROM wp_postmeta WHERE post_id IN (SELECT ID FROM wp_posts WHERE post_type = 'product' AND post_status = 'trash')");
@@ -251,7 +251,7 @@ function wac_delete_products_trashed() {
 }
 
 //SQL: Function to delete all coupons
-function wac_delete_coupons() {
+function ip_woo_delete_coupons() {
     global $wpdb;
 
     $wpdb->query("DELETE FROM wp_postmeta WHERE post_id IN (SELECT ID FROM wp_posts WHERE post_type = 'shop_coupon')");
@@ -259,7 +259,7 @@ function wac_delete_coupons() {
 }
 
 //SQL: Function to delete all order notes
-function wac_delete_orders_notes() {
+function ip_woo_delete_orders_notes() {
     global $wpdb;
 
     $wpdb->query("DELETE FROM wp_commentmeta WHERE comment_id IN (SELECT ID FROM wp_comments WHERE comment_type = 'order_note')");

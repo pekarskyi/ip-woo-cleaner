@@ -20,21 +20,21 @@ define( 'IP_WOO_CLEANER_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 define( 'IP_WOO_CLEANER_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 //FUNC: Add page to admin menu
-function wac_add_admin_menu() {
+function ip_woo_add_admin_menu() {
     add_menu_page(
         'WooCommerce Cleaner',
         'WooCommerce Cleaner',
         'manage_options',
-        'wac-cleaner',
-        'wac_admin_page'
+        'woo-cleaner',
+        'ip_woo_admin_page'
     );
 }
-add_action('admin_menu', 'wac_add_admin_menu');
+add_action('admin_menu', 'ip_woo_add_admin_menu');
 
 //FUNC: Додаємо посилання на сторінку налаштувань в таблиці плагінів
 add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'my_plugin_action_links');
 function my_plugin_action_links($links) {
-    $settings_link = '<a href="admin.php?page=wac-cleaner">' . __('Settings', 'ip-woo-cleaner') . '</a>';
+    $settings_link = '<a href="admin.php?page=woo-cleaner">' . __('Settings', 'ip-woo-cleaner') . '</a>';
     array_unshift($links, $settings_link);
     return $links;
 }
