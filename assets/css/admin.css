@@ -1,0 +1,123 @@
+.wc-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.section_actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+
+[class*="action_"] {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 250px;
+    width: 230px;
+    padding: 20px;
+    border: 1px solid #E5E5E5;
+    background: #FFF;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.block-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+[class*="action_"] h2 {
+    background: #E5E5E5;
+    margin: 0px;
+    padding: 10px;
+    width: 90%;
+}
+
+[class*="action_"] ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/*--- Sidebar ---*/
+.section_information {
+    width: 30%;
+    margin-bottom: 0px;
+}
+
+.section_information h1 {
+    line-height: 1.2;
+}
+
+[class*="_sidebar-block"] {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    padding: 15px;
+    margin: 10px 0px 10px 0px;
+}
+
+[class*="_sidebar-block"] h3 {
+    margin: 0px;
+    padding-bottom: 0px;
+}
+
+[class*="_sidebar-block"] li {
+    padding-bottom: 5px;
+}
+
+.disclaimer_sidebar-block {
+    border: 1px dashed #EC9329;
+    background: #FCF3E7;
+}
+
+.warning_sidebar-block {
+    border: 1px dashed #C62013;
+    background: #F8E6E4;
+}
+
+.helpful_sidebar-block {
+    border: 1px dashed #106b28;
+    background: #E4EEE7;
+}
+
+.helpful_sidebar-block a[href*="github.com"]:before {
+    content: '';
+    background: url('../images/github-logo.svg') no-repeat 100% 50%;
+    background-size: 19px;
+    padding-right: 20px;
+    margin-right: 3px;
+}
+
+.helpful_sidebar-block a[href*="wordpress.org"]:before {
+    content: '';
+    background: url('../images/wp-logo.png') no-repeat 100% 50%;
+    background-size: 17px;
+    padding-right: 20px;
+    margin-right: 3px;
+}
+
+.helpful_sidebar-block a[href*="inwebpress.com"]:before {
+    content: '';
+    background: url('../images/inwebpress-logo.png') no-repeat 100% 50%;
+    background-size: 17px;
+    padding-right: 20px;
+    margin-right: 3px;
+}
+
+.helpful_sidebar-block a[href*="t.me"]:before {
+    content: '';
+    background: url('../images/telegram-logo.png') no-repeat 100% 50%;
+    background-size: 17px;
+    padding-right: 20px;
+    margin-right: 3px;
+}

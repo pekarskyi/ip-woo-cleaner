@@ -1,0 +1,208 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Cleaner\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-20 11:42+0000\n"
+"PO-Revision-Date: 2025-02-20 14:39+0200\n"
+"Last-Translator: Mykola Pekarskyi <dizer7@gmail.com>\n"
+"Language-Team: Русский\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Loco-Version: 2.7.1; wp-6.7.2\n"
+"X-Domain: ip-woo-cleaner\n"
+
+#: inc/functions.php:128
+msgid "All coupons deleted!"
+msgstr "Все купоны удалены!"
+
+#: inc/functions.php:132
+msgid "All order notes deleted!"
+msgstr "Все заметки о заказах удалены!"
+
+#: inc/functions.php:116
+msgid "All orders (HPOS) deleted!"
+msgstr "Все заказы (HPOS) удалены!"
+
+#: inc/functions.php:120
+msgid "All orders (pre-HPOS) deleted!"
+msgstr "Все заказы (pre-HPOS) удалены!"
+
+#: inc/functions.php:124
+msgid "All trashed products deleted!"
+msgstr "Все товары в мусорнике удалены!"
+
+#: inc/functions.php:207 inc/functions.php:210
+msgid "Coupons:"
+msgstr "Купоны:"
+
+#: inc/functions.php:174
+msgid "Delete all attributes"
+msgstr "Удалить все атрибуты"
+
+#: inc/functions.php:161
+msgid "Delete all categories"
+msgstr "Удалить все категории"
+
+#: inc/functions.php:212
+msgid "Delete all coupons"
+msgstr "Удалить все купоны"
+
+#: inc/functions.php:238
+msgid "Delete all order notes"
+msgstr "Удалить все примечания"
+
+#: inc/functions.php:226
+msgid "Delete all orders (HPOS)"
+msgstr "Удалить все заказы (HPOS)"
+
+#: inc/functions.php:229
+msgid "Delete all orders (pre-HPOS)"
+msgstr "Удалить все заказы (pre-HPOS)"
+
+#: inc/functions.php:189
+msgid "Delete all products"
+msgstr "Удалить все товары"
+
+#: inc/functions.php:201
+msgid "Delete all tags"
+msgstr "Удалить все теги"
+
+#: inc/functions.php:191
+msgid "Delete all trashed products"
+msgstr "Удалить все товары в мусорнике"
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://inwebpress.com/"
+msgstr "https://inwebpress.com/"
+
+#. Author of the plugin
+msgid "Mykola Pekarskyi"
+msgstr "Николай Пекарский"
+
+#: inc/functions.php:235
+msgid "Order notes:"
+msgstr "Примечания к заказу:"
+
+#: inc/functions.php:220
+msgid "Order storage type:"
+msgstr "Тип хранения заказов:"
+
+#: inc/functions.php:221
+msgid "Orders in HPOS:"
+msgstr "Заказы в HPOS:"
+
+#: inc/functions.php:222
+msgid "Orders in pre-HPOS:"
+msgstr "Заказы в pre-HPOS:"
+
+#: inc/functions.php:218
+msgid "Orders:"
+msgstr "Заказы:"
+
+#: inc/functions.php:250
+msgid "Please note that this action cannot be undone."
+msgstr "Обратите внимание, что это действие нельзя отменить."
+
+#: inc/functions.php:96
+msgid "Product attributes deleted!"
+msgstr "Атрибуты товаров удалены!"
+
+#: inc/functions.php:100
+msgid "Product attributes set to not Public!"
+msgstr "Атрибуты установлены как Не архивы!"
+
+#: inc/functions.php:166
+msgid "Product Attributes:"
+msgstr "Атрибуты товаров:"
+
+#: inc/functions.php:169
+msgid "Product attributes:"
+msgstr "Атрибуты товаров:"
+
+#: inc/functions.php:108
+msgid "Product categories deleted!"
+msgstr "Категории товаров удалены!"
+
+#: inc/functions.php:154 inc/functions.php:157
+msgid "Product Categories:"
+msgstr "Категории товаров:"
+
+#: inc/functions.php:104
+msgid "Product tags deleted!"
+msgstr "Теги товаров удалены!"
+
+#: inc/functions.php:196
+msgid "Product Tags:"
+msgstr "Теги товаров:"
+
+#: inc/functions.php:199
+msgid "Product tags:"
+msgstr "Теги товаров:"
+
+#: inc/functions.php:112
+msgid "Products deleted!"
+msgstr "Товары удалены!"
+
+#: inc/functions.php:181 inc/functions.php:184
+msgid "Products:"
+msgstr "Товары:"
+
+#: inc/functions.php:170
+msgid "Public (archive) attributes:"
+msgstr "Атрибуты-архивы:"
+
+#: inc/functions.php:175
+msgid "Set all attributes as Not public"
+msgstr "Сделать атрибуты как не архивы"
+
+#: woo-cleaner.php:25
+msgid "Settings"
+msgstr "Настройки"
+
+#: inc/functions.php:249
+msgid ""
+"The author of this plugin assumes no responsibility for any damages, data "
+"loss, or other unforeseen consequences arising from the use of this plugin. "
+"The use of this plugin is at the user&rsquo;s own risk. It is recommended to "
+"perform regular data backups before installing and using the plugin."
+msgstr ""
+"Автор данного плагина не несет ответственности за любой ущерб, потерю данных "
+"или другие непредвиденные последствия, возникшие в результате использования "
+"данного плагина. Использование этого плагина осуществляется на собственный "
+"риск пользователя. Перед установкой и использованием плагина рекомендуется "
+"регулярно выполнять резервное копирование данных."
+
+#. Description of the plugin
+msgid ""
+"The plugin deletes attributes, tags, products, categories, and orders in "
+"WooCommerce."
+msgstr ""
+"Плагин удаляет атрибуты, теги, товары, категории и заказы в WooCommerce."
+
+#: inc/functions.php:248
+msgid ""
+"This plugin will help you to clean up your WooCommerce store by deleting "
+"unnecessary data."
+msgstr ""
+"Этот плагин поможет вам очистить ваш магазин WooCommerce, удалив ненужные "
+"данные."
+
+#: inc/functions.php:185
+msgid "Trashed products:"
+msgstr "Товары в мусорнике:"
+
+#: inc/functions.php:250
+msgid "WARNING: Remember to back up your database before deleting any data!"
+msgstr ""
+"ВНИМАНИЕ: Не забудьте создать резервную копию базы данных перед удалением "
+"любых данных!"
+
+#. Name of the plugin
+msgid "WooCommerce Cleaner"
+msgstr "WooCommerce Cleaner"
