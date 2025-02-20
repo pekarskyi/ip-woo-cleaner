@@ -67,7 +67,7 @@ The plugin does not clutter the database, but due to its nature, it is recommend
 🚀 Roadmap
 👨 We'll come up with something interesting together. Feel free to suggest!
 
-## Список змін
+## ✅ Список змін
 
 **Версія 1.0 - 21.02.2025:**
 - Відображає кількість різних об'єктів (записів, таксономій тощо)
@@ -81,7 +81,7 @@ The plugin does not clutter the database, but due to its nature, it is recommend
 - Видалення приміток до замовлень
 - Підтримка локалізації (українська, англійська, російська)
 
-## Changelog
+## ✅ Changelog
 
 **Version 1.0 - 21.02.2025:**
 - Displays the number of different objects (posts, taxonomies, etc.)
