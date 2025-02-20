@@ -138,7 +138,7 @@ function ip_woo_admin_page() {
             require_once IP_WOO_CLEANER_PLUGIN_PATH . '/inc/html-output.php';
 
             //INC: Section Information about plugin
-            require_once IP_WOO_CLEANER_PLUGIN_PATH . '/inc/section-info.php';
+            require_once IP_WOO_CLEANER_PLUGIN_PATH . '/inc/sidebar.php';
             ?>
         </div>    
     
