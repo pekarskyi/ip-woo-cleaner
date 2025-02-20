@@ -12,9 +12,9 @@ WooCommerce Cleaner – плагін для очищення сайту та б�
 
 Плагін не засмічує базу даних, однак через свою специфіку рекомендується використовувати його лише на DEV-сайтах або тестових середовищах.
 
-Залишайте свої запитання, пропозиції та ідеї в розділі - [Issues](https://github.com/pekarskyi/woo-cleaner/issues)
+❓ Залишайте свої відгуки, запитання, пропозиції та ідеї в розділі - [Issues](https://github.com/pekarskyi/woo-cleaner/issues)
 
-## Languages
+## ✅ Languages
 
 - Ukrainian
 - English
@@ -37,6 +37,7 @@ Need translations into other languages? – Feel free to reach out!
 
 3. Activate the Plugin
 - After installation, click **Activate Plugin** to start using it.
+
 
 **Alternative: Install via FTP**
 
@@ -62,6 +63,9 @@ The plugin was originally created for personal use, but it might be useful for y
 This plugin was designed as a fast and reliable solution for cleaning a site when working with WP All Import. I specialize in setting up product imports for clients and often test imports on my own site to prepare a fully functional import template.
 
 The plugin does not clutter the database, but due to its nature, it is recommended for use only on DEV or testing sites.
+
+🚀 Roadmap
+👨 We'll come up with something interesting together. Feel free to suggest!
 
 ## Список змін
 
