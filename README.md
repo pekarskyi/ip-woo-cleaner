@@ -79,14 +79,14 @@ Woo Cleaner – a simple plugin for cleaning the database from products, categor
 
 **Version 1.0 - 21.02.2025:**
 - Displays the number of different objects (posts, taxonomies, etc.)
-- Deletes products
-- Deletes product categories
-- Deletes product attributes
-- Removes product attributes from archives
-- Deletes product tags
-- Deletes coupons
-- Deletes orders
-- Deletes order notes
+- Delete products
+- Delete product categories
+- Delete product attributes
+- Remove product attributes from archives
+- Delete product tags
+- Delete coupons
+- Delete orders
+- Delete order notes
 - Supports localization (Ukrainian, English, Russian)
 
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://justgo.ink/standwithukraine)
