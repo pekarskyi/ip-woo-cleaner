@@ -89,4 +89,4 @@ WooCommerce Cleaner – a simple plugin for cleaning the database from products,
 - Deletes order notes
 - Supports localization (Ukrainian, English, Russian)
 
-[![Stand With Ukraine](https://justgo.ink/standwithukraine)](https://github.com/pekarskyi/StandWithUkraine/blob/main/docs/README.md)
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://justgo.ink/standwithukraine)
