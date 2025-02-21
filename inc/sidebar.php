@@ -50,7 +50,7 @@
     </div>
 
     <div class="standwithua_sidebar-block">
-        <a href="https://github.com/pekarskyi/StandWithUkraine/blob/main/docs/README.md" target="_blank" title="Donate"><img src="<?php echo IP_WOO_CLEANER_PLUGIN_URL . 'assets/images/StandWithUkraine.svg'; ?>" alt="Donate" width="180"></a>
+        <a href="https://justgo.ink/standwithukraine" target="_blank" title="Donate"><img src="<?php echo IP_WOO_CLEANER_PLUGIN_URL . 'assets/images/StandWithUkraine.svg'; ?>" alt="Donate" width="180"></a>
     </div>
 
 </div>

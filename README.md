@@ -1,17 +1,12 @@
 # WooCommerce Cleaner 1.0
 
-WooCommerce Cleaner – плагін для очищення сайту та бази даних від товарів, категорій, атрибутів, міток, купонів, замовлень і приміток до них.
-
-Плагін був створений для власних потреб, але, можливо, стане в пригоді й вам. Він має просту структуру, тому може бути корисним новачкам для ознайомлення з кодом і покращення навичок у розробці WordPress-плагінів.
+WooCommerce Cleaner – простий плагін для очищення бази даних від товарів, категорій, атрибутів, міток, купонів, замовлень і приміток до них.
 
 ### ✅ Практичне застосування:
 - Швидке очищення сайту після імпорту товарів, без необхідності перевстановлення WordPress.
 - Видалення демо-даних після встановлення теми.
 - Очищення БД після деактивації і видалення плагіну WooCommerce.
-
-Плагін розроблений як швидке та надійне рішення для очищення сайту при роботі з WP All Import. Я займаюся налаштуванням імпорту товарів для клієнтів і часто тестую імпорт на своєму сайті, щоб підготувати робочий шаблон.
-
-Плагін не засмічує базу даних, однак через свою специфіку рекомендується використовувати його лише на DEV-сайтах або тестових середовищах.
+- Плагін рекомендую використовувати на DEV-сайтах або тестових середовищах.
 
 ❓ Залишайте свої відгуки, запитання, пропозиції та ідеї в розділі - [Issues](https://github.com/pekarskyi/woo-cleaner/issues)
 
@@ -53,18 +48,17 @@ Now the plugin should be active and ready to use! 🚀
 
 ## ✅ ENG description
 
-WooCommerce Cleaner – a plugin for cleaning your site and database from products, categories, attributes, tags, coupons, orders, and order notes.
+WooCommerce Cleaner – a simple plugin for cleaning the database from products, categories, attributes, tags, coupons, orders, and their notes.
 
 The plugin was originally created for personal use, but it might be useful for you as well. It has a simple structure, making it a great resource for beginners to explore the code and improve their skills in WordPress plugin development.
+
+❓ Leave your reviews, questions, suggestions, and ideas in the section - [Issues](https://github.com/pekarskyi/woo-cleaner/issues)
 
 ### Practical use cases:
 - Quickly clean up your site after importing products, without having to reinstall WordPress.
 - Remove demo data after installing a theme.
 - Database cleanup after deactivating and deleting the WooCommerce plugin.
-
-This plugin was designed as a fast and reliable solution for cleaning a site when working with WP All Import. I specialize in setting up product imports for clients and often test imports on my own site to prepare a fully functional import template.
-
-The plugin does not clutter the database, but due to its nature, it is recommended for use only on DEV or testing sites.
+- I recommend using the plugin on DEV sites or testing environments.
 
 🚀 Roadmap
 👨 We'll come up with something interesting together. Feel free to suggest!
@@ -97,4 +91,4 @@ The plugin does not clutter the database, but due to its nature, it is recommend
 - Deletes order notes
 - Supports localization (Ukrainian, English, Russian)
 
-[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://github.com/pekarskyi/StandWithUkraine/blob/main/docs/README.md)
+[![Stand With Ukraine](https://justgo.ink/standwithukraine)](https://github.com/pekarskyi/StandWithUkraine/blob/main/docs/README.md)
