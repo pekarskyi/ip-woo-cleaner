@@ -1,6 +1,6 @@
 # Woo Cleaner 1.0
 
-WooCommerce Cleaner – простий плагін для очищення бази даних від товарів, категорій, атрибутів, міток, купонів, замовлень і приміток до них.
+Woo Cleaner – простий плагін для очищення бази даних від товарів, категорій, атрибутів, міток, купонів, замовлень і приміток до них.
 
 ### ✅ Практичне застосування:
 - Швидке очищення сайту після імпорту товарів, без необхідності перевстановлення WordPress.
@@ -48,7 +48,7 @@ Now the plugin should be active and ready to use! 🚀
 
 ## ✅ ENG description
 
-WooCommerce Cleaner – a simple plugin for cleaning the database from products, categories, attributes, tags, coupons, orders, and their notes.
+Woo Cleaner – a simple plugin for cleaning the database from products, categories, attributes, tags, coupons, orders, and their notes.
 
 ## ✅ Practical use cases:
 - Quickly clean up your site after importing products, without having to reinstall WordPress.
