@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce Cleaner\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-20 11:42+0000\n"
-"PO-Revision-Date: 2025-02-20 14:15+0000\n"
+"PO-Revision-Date: 2025-02-21 01:48+0200\n"
 "Last-Translator: Mykola Pekarskyi <dizer7@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
 "n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
-"X-Generator: Loco https://localise.biz/\n"
+"X-Generator: Poedit 3.5\n"
 "X-Loco-Version: 2.7.1; wp-6.7.2\n"
 "X-Domain: ip-woo-cleaner\n"
 
@@ -78,7 +78,7 @@ msgstr "Удалить все теги"
 
 #: inc/html-output.php:42
 msgid "Delete all trashed products"
-msgstr "Удалить все товары в мусорнике"
+msgstr "Очистить мусорник"
 
 #: inc/section-info.php:27
 msgid "description, FAQ and updates."

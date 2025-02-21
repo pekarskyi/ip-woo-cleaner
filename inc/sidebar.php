@@ -22,7 +22,7 @@
         <h3><?php _e('Helpful Links:', 'ip-woo-cleaner'); ?></h3>
         <ul>
             <li>
-                <a href="https://github.com/pekarskyi/WooCommerce-Cleaner" target="_blank">
+                <a href="https://github.com/pekarskyi/woo-cleaner" target="_blank">
                     <?php _e('Plugin page on Github', 'ip-woo-cleaner'); ?>
                 </a> 
                 - <?php _e('description, FAQ and updates.', 'ip-woo-cleaner'); ?>
