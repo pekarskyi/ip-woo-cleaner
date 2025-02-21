@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce Cleaner\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-20 11:42+0000\n"
-"PO-Revision-Date: 2025-02-21 01:48+0200\n"
+"PO-Revision-Date: 2025-02-21 18:05+0200\n"
 "Last-Translator: Mykola Pekarskyi <dizer7@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -94,7 +94,7 @@ msgstr "Полезные ссылки:"
 
 #. URI of the plugin
 msgid "https://github.com/pekarskyi/WooCommerce-Cleaner"
-msgstr "https://github.com/pekarskyi/WooCommerce-Cleaner"
+msgstr "https://github.com/pekarskyi/woo-cleaner"
 
 #. Author URI of the plugin
 msgid "https://inwebpress.com/"
@@ -252,7 +252,7 @@ msgstr ""
 
 #. Name of the plugin
 msgid "WooCommerce Cleaner"
-msgstr "WooCommerce Cleaner"
+msgstr "Woo Cleaner"
 
 #: inc/section-info.php:31
 msgid "WPvivid Backup & Migration"
