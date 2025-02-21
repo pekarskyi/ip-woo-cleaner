@@ -58,7 +58,7 @@ WooCommerce Cleaner – a simple plugin for cleaning the database from products,
 
 ❓ Leave your reviews, questions, suggestions, and ideas in the section - [Issues](https://github.com/pekarskyi/woo-cleaner/issues)
 
-🚀 Roadmap
+## 🚀 Roadmap
 👨 We'll come up with something interesting together. Feel free to suggest!
 
 ## ✅ Список змін
