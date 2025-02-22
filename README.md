@@ -1,3 +1,5 @@
+(https://https://github.com/pekarskyi/assets/blob/master/woo-cleaner/woo-cleaner_youtube.jpg)
+
 # Woo Cleaner 1.0
 
 Woo Cleaner – простий плагін для очищення бази даних від товарів, категорій, атрибутів, міток, купонів, замовлень і приміток до них.
@@ -17,6 +19,9 @@ Woo Cleaner – простий плагін для очищення бази д�
 - Russian
 
 Need translations into other languages? – Feel free to reach out!
+
+## ✅ Screenshots
+(https://https://github.com/pekarskyi/assets/blob/master/woo-cleaner/woo-cleaner.jpg)
 
 ## ✅ How to install
 
