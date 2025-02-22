@@ -1,4 +1,4 @@
-!(https://github.com/pekarskyi/assets/blob/master/woo-cleaner/woo-cleaner_youtube.jpg)
+!(https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner_youtube.jpg)
 
 # Woo Cleaner 1.0
 
