@@ -1,4 +1,4 @@
-!(https://https://github.com/pekarskyi/assets/blob/master/woo-cleaner/woo-cleaner_youtube.jpg)
+!(https://github.com/pekarskyi/assets/blob/master/woo-cleaner/woo-cleaner_youtube.jpg)
 
 # Woo Cleaner 1.0
 
@@ -21,7 +21,7 @@ Woo Cleaner – простий плагін для очищення бази д�
 Need translations into other languages? – Feel free to reach out!
 
 ## ✅ Screenshots
-!(https://https://github.com/pekarskyi/assets/blob/master/woo-cleaner/woo-cleaner.jpg)
+!(https://github.com/pekarskyi/assets/blob/master/woo-cleaner/woo-cleaner.jpg)
 
 ## ✅ How to install
 
