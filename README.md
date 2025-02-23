@@ -4,7 +4,7 @@
 
 Woo Cleaner – простий плагін для очищення бази даних від товарів, категорій, атрибутів, міток, купонів, замовлень і приміток до них.
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/pekarskyi/woo-cleaner?style=for-the-badge)](https://GitHub.com/pekarskyi/YOURLS-uk/releases/)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/pekarskyi/woo-cleaner?style=for-the-badge)](https://GitHub.com/pekarskyi/woo-cleaner/releases/)
 
 ### ✅ Практичне застосування:
 - Швидке очищення сайту після імпорту товарів, без необхідності перевстановлення WordPress.
