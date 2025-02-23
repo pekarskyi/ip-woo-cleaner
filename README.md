@@ -8,7 +8,6 @@ Woo Cleaner – простий плагін для очищення бази д�
 - Швидке очищення сайту після імпорту товарів, без необхідності перевстановлення WordPress.
 - Видалення демо-даних після встановлення теми.
 - Очищення БД після деактивації і видалення плагіну WooCommerce.
-- Плагін рекомендую використовувати на DEV-сайтах або тестових середовищах.
 
 ❓ Залишайте свої відгуки, запитання, пропозиції та ідеї в розділі - [Issues](https://github.com/pekarskyi/woo-cleaner/issues)
 
@@ -59,7 +58,6 @@ Woo Cleaner – a simple plugin for cleaning the database from products, categor
 - Quickly clean up your site after importing products, without having to reinstall WordPress.
 - Remove demo data after installing a theme.
 - Database cleanup after deactivating and deleting the WooCommerce plugin.
-- I recommend using the plugin on DEV sites or testing environments.
 
 ❓ Leave your reviews, questions, suggestions, and ideas in the section - [Issues](https://github.com/pekarskyi/woo-cleaner/issues)
 
