@@ -21,6 +21,9 @@ Woo Cleaner – простий плагін для очищення бази д�
 
 Need translations into other languages? – Feel free to reach out!
 
+## ✅ Video
+[Click to view](https://www.youtube.com/watch?v=H0NKspNEVmY)
+
 ## ✅ Screenshots
 ![https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner.jpg](https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner.jpg)
 
