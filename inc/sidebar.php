@@ -1,6 +1,6 @@
 <div class="section_information">
     
-    <h1>Woo Cleaner 1.0</h1>
+    <h1>Woo Cleaner 1.0 DEV</h1>
     
     <p><strong><?php _e('This plugin will help you to clean up your WooCommerce store by deleting unnecessary data.', 'ip-woo-cleaner'); ?></strong></p>
     

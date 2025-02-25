@@ -149,12 +149,31 @@ function ip_woo_admin_page() {
 function ip_woo_delete_attributes() {
     global $wpdb;
     
+    // Видалення термінів атрибутів
     $wpdb->query("DELETE FROM wp_terms WHERE term_id IN (SELECT term_id FROM wp_term_taxonomy WHERE taxonomy LIKE 'pa_%')");
-    $wpdb->query("DELETE FROM wp_term_taxonomy WHERE taxonomy LIKE 'pa_%'");
-    $wpdb->query("DELETE FROM wp_term_relationships WHERE term_taxonomy_id NOT IN (SELECT term_taxonomy_id FROM wp_term_taxonomy)");
-    $wpdb->query("DELETE FROM wp_woocommerce_attribute_taxonomies");
+    
+    // Видалення метаданих термінів атрибутів
+    $wpdb->query("DELETE FROM wp_termmeta WHERE term_id IN (SELECT term_id FROM wp_term_taxonomy WHERE taxonomy LIKE 'pa_%')");
     $wpdb->query("DELETE FROM wp_termmeta WHERE meta_key LIKE 'order_pa_%'");
-    $wpdb->query("DELETE FROM wp_options WHERE option_name LIKE ('_transient_wc_%')");
+    
+    // Видалення таксономій атрибутів
+    $wpdb->query("DELETE FROM wp_term_taxonomy WHERE taxonomy LIKE 'pa_%'");
+    
+    // Видалення осиротілих зв'язків
+    $wpdb->query("DELETE FROM wp_term_relationships WHERE term_taxonomy_id NOT IN (SELECT term_taxonomy_id FROM wp_term_taxonomy)");
+    
+    // Видалення метаданих атрибутів з товарів
+    $wpdb->query("DELETE FROM wp_postmeta WHERE meta_key LIKE 'attribute_%'");
+    
+    // Видалення самих атрибутів з таблиці атрибутів WooCommerce
+    $wpdb->query("DELETE FROM wp_woocommerce_attribute_taxonomies");
+    
+    // Очищення кешу WooCommerce
+    $wpdb->query("DELETE FROM wp_options WHERE option_name LIKE '_transient_wc_%'");
+    $wpdb->query("DELETE FROM wp_options WHERE option_name LIKE '_transient_timeout_wc_%'");
+    
+    // Оновлення опції для сигналізації WooCommerce про необхідність оновлення
+    update_option('woocommerce_attribute_lookup_regenerated', 0);
 }
 
 //SQL: Function to set attributes as non-archive
