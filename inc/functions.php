@@ -38,11 +38,11 @@ function ip_woo_count_coupons() {
     return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}posts WHERE post_type = 'shop_coupon'");
 }
 
-//FUNC: Function to count orders in HPOS
-function ip_woo_count_orders_hpos() {
-    global $wpdb;
-    return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}wc_orders");
-}
+// //FUNC: Function to count orders in HPOS
+// function ip_woo_count_orders_hpos() {
+//     global $wpdb;
+//     return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}wc_orders");
+// }
 
 //FUNC: Function to count orders in pre-HPOS
 // function ip_woo_count_orders_pre_hpos() {
@@ -50,21 +50,25 @@ function ip_woo_count_orders_hpos() {
 //     return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}posts WHERE post_type = 'shop_order' AND ID NOT IN (SELECT post_id FROM {$wpdb->prefix}wc_orders)");
 // }
 
-function ip_woo_count_orders_pre_hpos() {
+function ip_woo_count_orders() {
     global $wpdb;
 
     // Перевіряємо, чи HPOS активний
     $hpos_enabled = get_option('woocommerce_custom_orders_table_enabled', 'no') === 'yes';
 
     if ($hpos_enabled) {
-        // Якщо HPOS активний, використовуємо нові таблиці
-        
+        // Якщо HPOS активний, використовуємо нові таблиці для підрахунку
+        $query = "SELECT COUNT(*) FROM {$wpdb->prefix}wc_orders";
     } else {
         // Якщо HPOS не активний, використовуємо старий запит
-        return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}posts WHERE post_type = 'shop_order' AND ID NOT IN (SELECT post_id FROM {$wpdb->prefix}wc_orders)");
+        // Тут потрібно буде просто підрахувати кількість записів у таблиці wp_posts, де пост тип 'shop_order'
+        $query = "SELECT COUNT(*) 
+                  FROM {$wpdb->prefix}posts 
+                  WHERE post_type = 'shop_order'";
     }
-}
 
+    return (int) $wpdb->get_var($query);
+}
 
 //FUNC: Function to count order notes
 function ip_woo_count_order_notes() {
@@ -136,8 +140,7 @@ function ip_woo_admin_page() {
     $archived_attribute_count = ip_woo_count_archived_attributes(); // How many of them are archived
     $product_tags_count = ip_woo_count_product_tags(); // Number of product tags
     $coupons_count = ip_woo_count_coupons(); // Number of coupons
-    $orders_hpos_count = ip_woo_count_orders_hpos(); // Number of orders in HPOS
-    $orders_pre_hpos_count = ip_woo_count_orders_pre_hpos(); // Number of orders in pre-HPOS
+    $orders_count = ip_woo_count_orders(); // Number of orders
     $order_notes_count = ip_woo_count_order_notes(); // Number of order notes
     $trashed_product_count = ip_woo_count_trashed_products(); // Get the number of trashed products
     $product_count = ip_woo_count_products(); // Count Products
@@ -251,24 +254,53 @@ function ip_woo_delete_product_categories() {
                   WHERE terms.term_id IS NULL");
 }
 
-
-//SQL: Function to delete all orders (HPOS)
+//SQL: Function to delete all orders
 function ip_woo_delete_orders() {
     global $wpdb;
 
-    $wpdb->query("DELETE FROM wp_wc_orders_meta");
-    $wpdb->query("DELETE FROM wp_wc_orders");
-    $wpdb->query("DELETE FROM wp_wc_order_addresses");
-    $wpdb->query("DELETE FROM wp_wc_order_operational_data");
-    $wpdb->query("DELETE FROM wp_commentmeta WHERE comment_id IN (SELECT ID FROM wp_comments WHERE comment_type = 'order_note')");
-    $wpdb->query("DELETE FROM wp_comments WHERE comment_type = 'order_note'");
-    $wpdb->query("DELETE FROM wp_woocommerce_order_itemmeta");
-    $wpdb->query("DELETE FROM wp_woocommerce_order_items");
-    $wpdb->query("DELETE FROM wp_commentmeta WHERE comment_id IN (SELECT ID FROM wp_comments WHERE comment_type = 'order_note')");
-    $wpdb->query("DELETE FROM wp_comments WHERE comment_type = 'order_note'");
-    $wpdb->query("DELETE FROM wp_postmeta WHERE post_id IN (SELECT ID FROM wp_posts WHERE post_type = 'shop_order')");
-    $wpdb->query("DELETE FROM wp_posts WHERE post_type = 'shop_order'");
+    // Перевіряємо, чи HPOS активний
+    $hpos_enabled = get_option('woocommerce_custom_orders_table_enabled', 'no') === 'yes';
+
+    // Якщо HPOS активний, використовуємо нові таблиці для видалення замовлень
+    if ($hpos_enabled) {
+        // Видаляємо всі дані про товари в замовленнях
+        $wpdb->query("DELETE FROM {$wpdb->prefix}woocommerce_order_itemmeta");
+        $wpdb->query("DELETE FROM {$wpdb->prefix}woocommerce_order_items");
+
+        // Видаляємо записи з таблиці wc_order_product_lookup
+        $wpdb->query("DELETE FROM {$wpdb->prefix}wc_order_product_lookup");
+
+        // Видаляємо статистику замовлень
+        $wpdb->query("DELETE FROM {$wpdb->prefix}wc_order_stats");
+
+        // Видаляємо замовлення з таблиці wc_orders
+        $wpdb->query("DELETE FROM {$wpdb->prefix}wc_orders");
+
+        // Видаляємо пост з типом 'shop_order'
+        $wpdb->query("DELETE FROM {$wpdb->prefix}posts WHERE post_type = 'shop_order'");
+    } else {
+        // Для старої структури даних видаляємо замовлення і мета-дані для старих таблиць
+        $wpdb->query("DELETE FROM {$wpdb->prefix}wp_wc_orders_meta");
+        $wpdb->query("DELETE FROM {$wpdb->prefix}wp_wc_orders");
+        $wpdb->query("DELETE FROM {$wpdb->prefix}wp_wc_order_addresses");
+        $wpdb->query("DELETE FROM {$wpdb->prefix}wp_wc_order_operational_data");
+    }
+
+    // Видаляємо коментарі та мета-дані для замовлень
+    $wpdb->query("DELETE FROM {$wpdb->prefix}commentmeta WHERE comment_id IN (SELECT comment_id FROM {$wpdb->prefix}comments WHERE comment_type = 'order_note')");
+    $wpdb->query("DELETE FROM {$wpdb->prefix}comments WHERE comment_type = 'order_note'");
+
+    // Видаляємо мета-дані товарів у замовленнях
+    $wpdb->query("DELETE FROM {$wpdb->prefix}woocommerce_order_itemmeta");
+    $wpdb->query("DELETE FROM {$wpdb->prefix}woocommerce_order_items");
+
+    // Видаляємо мета-дані для замовлень
+    $wpdb->query("DELETE FROM {$wpdb->prefix}postmeta WHERE post_id IN (SELECT ID FROM {$wpdb->prefix}posts WHERE post_type = 'shop_order')");
+    
+    // Видаляємо замовлення
+    $wpdb->query("DELETE FROM {$wpdb->prefix}posts WHERE post_type = 'shop_order'");
 }
+
 
 //SQL: Function to delete all products in the trash
 function ip_woo_delete_products_trashed() {

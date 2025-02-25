@@ -69,12 +69,12 @@
                         <h2><?php _e('Orders:', 'ip-woo-cleaner'); ?></h2>
                         <ul>
                             <li><?php _e('Order storage type:', 'ip-woo-cleaner'); ?> <?php echo $hpos_status; ?></li>
-                            <li><?php _e('Orders:', 'ip-woo-cleaner'); ?> <?php echo $orders_hpos_count; ?></li>
+                            <li><?php _e('Orders:', 'ip-woo-cleaner'); ?> <?php echo $orders_count; ?></li>
                         </ul>
                         
                         <div class="block-inner">
                             <input type="submit" name="ip_woo_delete_orders" class="button button-primary" value="<?php _e('Delete all orders', 'ip-woo-cleaner'); ?>" 
-                            <?php echo ($orders_hpos_count === 0) ? 'disabled' : ''; ?>>
+                            <?php echo ($orders_count === 0) ? 'disabled' : ''; ?>>
                         </div>
                         
                         <div class="block-inner">
