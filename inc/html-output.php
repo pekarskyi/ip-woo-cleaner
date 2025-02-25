@@ -69,16 +69,12 @@
                         <h2><?php _e('Orders:', 'ip-woo-cleaner'); ?></h2>
                         <ul>
                             <li><?php _e('Order storage type:', 'ip-woo-cleaner'); ?> <?php echo $hpos_status; ?></li>
-                            <li><?php _e('Orders in HPOS:', 'ip-woo-cleaner'); ?> <?php echo $orders_hpos_count; ?></li>
-                            <li><?php _e('Orders in pre-HPOS:', 'ip-woo-cleaner'); ?> <?php echo $orders_pre_hpos_count; ?></li>
+                            <li><?php _e('Orders:', 'ip-woo-cleaner'); ?> <?php echo $orders_hpos_count; ?></li>
                         </ul>
                         
                         <div class="block-inner">
-                            <input type="submit" name="ip_woo_delete_orders_hpos" class="button button-primary" value="<?php _e('Delete all orders (HPOS)', 'ip-woo-cleaner'); ?>" 
+                            <input type="submit" name="ip_woo_delete_orders" class="button button-primary" value="<?php _e('Delete all orders', 'ip-woo-cleaner'); ?>" 
                             <?php echo ($orders_hpos_count === 0) ? 'disabled' : ''; ?>>
-                                                
-                            <input type="submit" name="ip_woo_delete_orders_pre_hpos" class="button button-primary" value="<?php _e('Delete all orders (pre-HPOS)', 'ip-woo-cleaner'); ?>" 
-                            <?php echo ($orders_pre_hpos_count === 0) ? 'disabled' : ''; ?>>
                         </div>
                         
                         <div class="block-inner">
@@ -90,6 +86,54 @@
                             <?php echo ($order_notes_count === 0) ? 'disabled' : ''; ?>>
                         </div>
                     </div>
+
+                    <div class="action_remove-table-woo">
+    <h2><?php _e('Remove WooCommerce Tables:', 'ip-woo-cleaner'); ?></h2>
+    <div class="block-inner">
+        <form method="post" action="">
+            <?php wp_nonce_field('ip_woo_remove_tables_action', 'ip_woo_remove_tables_nonce'); ?>
+            <input type="submit" name="ip_woo_remove_tables" class="button button-primary" value="<?php _e('Remove Tables', 'ip-woo-cleaner'); ?>" 
+                onclick="return confirm('<?php _e('WARNING: This will permanently delete all WooCommerce tables from the database. This cannot be undone. Are you sure?', 'ip-woo-cleaner'); ?>');">
+        </form>
+    </div>
+</div>
+
+<?php
+// Обробник кнопки видалення таблиць WooCommerce
+function handle_woo_remove_tables_button() {
+    if (isset($_POST['ip_woo_remove_tables'])) {
+        // Перевіряємо nonce для безпеки
+        if (isset($_POST['ip_woo_remove_tables_nonce']) && wp_verify_nonce($_POST['ip_woo_remove_tables_nonce'], 'ip_woo_remove_tables_action')) {
+            
+            // Викликаємо функцію очищення
+            $result = clean_woocommerce_database();
+            
+            if ($result) {
+                // Додаємо повідомлення про успіх
+                add_action('admin_notices', function() {
+                    echo '<div class="notice notice-success is-dismissible"><p>' . 
+                          __('WooCommerce tables have been removed successfully.', 'ip-woo-cleaner') . 
+                          '</p></div>';
+                });
+            } else {
+                // Додаємо повідомлення про помилку
+                add_action('admin_notices', function() {
+                    echo '<div class="notice notice-error is-dismissible"><p>' . 
+                          __('Failed to remove WooCommerce tables.', 'ip-woo-cleaner') . 
+                          '</p></div>';
+                });
+            }
+
+            // Перенаправлення, щоб уникнути повторної відправки форми
+            wp_redirect(admin_url('admin.php?page=woo-cleaner'));
+            exit;
+        }
+    }
+}
+
+// Додаємо обробник до хуку admin_init
+add_action('admin_init', 'handle_woo_remove_tables_button');
+?>
 
                 </div>
             </form>

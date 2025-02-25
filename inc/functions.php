@@ -45,10 +45,26 @@ function ip_woo_count_orders_hpos() {
 }
 
 //FUNC: Function to count orders in pre-HPOS
+// function ip_woo_count_orders_pre_hpos() {
+//     global $wpdb;
+//     return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}posts WHERE post_type = 'shop_order' AND ID NOT IN (SELECT post_id FROM {$wpdb->prefix}wc_orders)");
+// }
+
 function ip_woo_count_orders_pre_hpos() {
     global $wpdb;
-    return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}posts WHERE post_type = 'shop_order' AND ID NOT IN (SELECT post_id FROM {$wpdb->prefix}wc_orders)");
+
+    // Перевіряємо, чи HPOS активний
+    $hpos_enabled = get_option('woocommerce_custom_orders_table_enabled', 'no') === 'yes';
+
+    if ($hpos_enabled) {
+        // Якщо HPOS активний, використовуємо нові таблиці
+        
+    } else {
+        // Якщо HPOS не активний, використовуємо старий запит
+        return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}posts WHERE post_type = 'shop_order' AND ID NOT IN (SELECT post_id FROM {$wpdb->prefix}wc_orders)");
+    }
 }
+
 
 //FUNC: Function to count order notes
 function ip_woo_count_order_notes() {
@@ -96,14 +112,11 @@ function ip_woo_admin_page() {
         ip_woo_delete_products();
         echo '<div class="updated"><p>' . __('Products deleted!', 'ip-woo-cleaner') . '</p></div>';
     }
-    if (isset($_POST['ip_woo_delete_orders_hpos'])) {
-        ip_woo_delete_orders_hpos();
-        echo '<div class="updated"><p>' . __('All orders (HPOS) deleted!', 'ip-woo-cleaner') . '</p></div>';
+    if (isset($_POST['ip_woo_delete_orders'])) {
+        ip_woo_delete_orders();
+        echo '<div class="updated"><p>' . __('All orders deleted!', 'ip-woo-cleaner') . '</p></div>';
     }
-    if (isset($_POST['ip_woo_delete_orders_pre_hpos'])) {
-        ip_woo_delete_orders_pre_hpos();
-        echo '<div class="updated"><p>' . __('All orders (pre-HPOS) deleted!', 'ip-woo-cleaner') . '</p></div>';
-    }
+
     if (isset($_POST['ip_woo_delete_products_trashed'])) {
         ip_woo_delete_products_trashed();
         echo '<div class="updated"><p>' . __('All trashed products deleted!', 'ip-woo-cleaner') . '</p></div>';
@@ -135,6 +148,8 @@ function ip_woo_admin_page() {
         <div class="wc-wrap">          
             <?php          
             //INC: Section HTML content for the page
+
+            require_once IP_WOO_CLEANER_PLUGIN_PATH . '/inc/remove-all-data-woo.php';
             require_once IP_WOO_CLEANER_PLUGIN_PATH . '/inc/html-output.php';
 
             //INC: Section Information about plugin
@@ -238,7 +253,7 @@ function ip_woo_delete_product_categories() {
 
 
 //SQL: Function to delete all orders (HPOS)
-function ip_woo_delete_orders_hpos() {
+function ip_woo_delete_orders() {
     global $wpdb;
 
     $wpdb->query("DELETE FROM wp_wc_orders_meta");
@@ -247,12 +262,6 @@ function ip_woo_delete_orders_hpos() {
     $wpdb->query("DELETE FROM wp_wc_order_operational_data");
     $wpdb->query("DELETE FROM wp_commentmeta WHERE comment_id IN (SELECT ID FROM wp_comments WHERE comment_type = 'order_note')");
     $wpdb->query("DELETE FROM wp_comments WHERE comment_type = 'order_note'");
-}
-
-//SQL: Function to delete all orders (pre-HPOS)
-function ip_woo_delete_orders_pre_hpos() {
-    global $wpdb;
-
     $wpdb->query("DELETE FROM wp_woocommerce_order_itemmeta");
     $wpdb->query("DELETE FROM wp_woocommerce_order_items");
     $wpdb->query("DELETE FROM wp_commentmeta WHERE comment_id IN (SELECT ID FROM wp_comments WHERE comment_type = 'order_note')");
