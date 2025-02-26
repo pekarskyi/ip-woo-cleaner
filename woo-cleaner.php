@@ -54,3 +54,12 @@ function ip_woo_cleaner_load_textdomain() {
 load_plugin_textdomain( 'ip-woo-cleaner', false, dirname( plugin_basename( __FILE__ ) ) .
 '/lang/' );
 }
+
+function wpvivid_relogin_user() {
+    if (is_user_logged_in()) {
+        $user = wp_get_current_user();
+        wp_set_auth_cookie($user->ID);
+        wp_set_current_user($user->ID);
+    }
+}
+add_action('wpvivid_after_restore', 'wpvivid_relogin_user');

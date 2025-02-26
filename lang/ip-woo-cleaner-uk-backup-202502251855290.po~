@@ -275,11 +275,11 @@ msgstr ""
 
 #. Name of the plugin
 msgid "Woo Cleaner"
-msgstr "Woo Cleaner"
+msgstr ""
 
 #: inc/remove-all-data-woo.php:118
 msgid "WooCommerce has been completely removed."
-msgstr "WooCommerce було повністю видалено."
+msgstr ""
 
 #: inc/sidebar.php:32
 msgid "WPvivid Backup & Migration"

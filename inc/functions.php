@@ -5,51 +5,89 @@ if (!defined('ABSPATH')) {
 }
 
 //FUNC: Check HPOS status
+// function ip_woo_check_hpos_status() {
+//     if (class_exists('\Automattic\WooCommerce\Utilities\OrderUtil') && \Automattic\WooCommerce\Utilities\OrderUtil::custom_orders_table_usage_is_enabled()) {
+//         return 'HPOS';
+//     } else {
+//         return 'pre-HPOS';
+//     }
+// }
+
+// FUNC: Check HPOS status
 function ip_woo_check_hpos_status() {
-    if (class_exists('\Automattic\WooCommerce\Utilities\OrderUtil') && \Automattic\WooCommerce\Utilities\OrderUtil::custom_orders_table_usage_is_enabled()) {
-        return 'HPOS';
-    } else {
-        return 'pre-HPOS';
+    if (class_exists('\Automattic\WooCommerce\Utilities\OrderUtil')) {
+        if (\Automattic\WooCommerce\Utilities\OrderUtil::custom_orders_table_usage_is_enabled()) {
+            return 'HPOS';
+        } else {
+            return 'pre-HPOS';
+        }
     }
+    return __('Missing', 'ip-woo-cleaner'); // Локалізоване слово "Відсутнє"
 }
+
 
 //FUNC: Check count attributes
 function ip_woo_count_attributes() {
     global $wpdb;
-    $count = $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}woocommerce_attribute_taxonomies");
-    return $count ? intval($count) : 0;
+
+    // Перевіряємо, чи існує таблиця
+    $table_name = $wpdb->prefix . 'woocommerce_attribute_taxonomies';
+    $table_exists = $wpdb->get_var("SHOW TABLES LIKE '$table_name'");
+
+    if (!$table_exists) {
+        return 0; // Якщо таблиці немає, повертаємо 0
+    }
+
+    return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$table_name}");
 }
+
 
 //FUNC: Function to count attributes that are Public (attribute_public = 1)
 function ip_woo_count_archived_attributes() {
     global $wpdb;
-    return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}woocommerce_attribute_taxonomies WHERE attribute_public = 1");
+
+    // Перевіряємо, чи існує таблиця
+    $table_name = $wpdb->prefix . 'woocommerce_attribute_taxonomies';
+    $table_exists = $wpdb->get_var("SHOW TABLES LIKE '$table_name'");
+
+    if (!$table_exists) {
+        return 0; // Якщо таблиці немає, повертаємо 0
+    }
+
+    return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$table_name} WHERE attribute_public = 1");
 }
+
 
 //FUNC: Function to count all product tags
 function ip_woo_count_product_tags() {
     global $wpdb;
-    return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}term_taxonomy WHERE taxonomy = 'product_tag'");
+
+    // Перевіряємо, чи існує таблиця term_taxonomy
+    if ($wpdb->get_var("SHOW TABLES LIKE '{$wpdb->prefix}term_taxonomy'") == $wpdb->prefix . 'term_taxonomy') {
+        // Якщо таблиця існує, виконуємо запит
+        return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}term_taxonomy WHERE taxonomy = 'product_tag'");
+    } else {
+        // Якщо таблиця не існує, повертаємо 0 або інше значення
+        return 0;
+    }
 }
+
 
 //FUNC: Function to count all coupons in WooCommerce
 function ip_woo_count_coupons() {
     global $wpdb;
-    return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}posts WHERE post_type = 'shop_coupon'");
+
+    // Перевіряємо, чи існує таблиця posts
+    if ($wpdb->get_var("SHOW TABLES LIKE '{$wpdb->prefix}posts'") == $wpdb->prefix . 'posts') {
+        // Якщо таблиця існує, виконуємо запит
+        return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}posts WHERE post_type = 'shop_coupon'");
+    } else {
+        // Якщо таблиця не існує, повертаємо 0 або інше значення
+        return 0;
+    }
 }
 
-// //FUNC: Function to count orders in HPOS
-// function ip_woo_count_orders_hpos() {
-//     global $wpdb;
-//     return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}wc_orders");
-// }
-
-//FUNC: Function to count orders in pre-HPOS
-// function ip_woo_count_orders_pre_hpos() {
-//     global $wpdb;
-//     return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}posts WHERE post_type = 'shop_order' AND ID NOT IN (SELECT post_id FROM {$wpdb->prefix}wc_orders)");
-// }
-
+//FUNC: Function to count order
 function ip_woo_count_orders() {
     global $wpdb;
 
@@ -151,8 +189,6 @@ function ip_woo_admin_page() {
         <div class="wc-wrap">          
             <?php          
             //INC: Section HTML content for the page
-
-            require_once IP_WOO_CLEANER_PLUGIN_PATH . '/inc/remove-all-data-woo.php';
             require_once IP_WOO_CLEANER_PLUGIN_PATH . '/inc/html-output.php';
 
             //INC: Section Information about plugin
@@ -162,6 +198,7 @@ function ip_woo_admin_page() {
     
     <?php
 }
+
 
 //SQL: Function to delete attributes
 function ip_woo_delete_attributes() {
@@ -322,7 +359,10 @@ function ip_woo_delete_coupons() {
 function ip_woo_delete_orders_notes() {
     global $wpdb;
 
-    $wpdb->query("DELETE FROM wp_commentmeta WHERE comment_id IN (SELECT ID FROM wp_comments WHERE comment_type = 'order_note')");
-    $wpdb->query("DELETE FROM wp_comments WHERE comment_type = 'order_note'");
+    // Видаляємо всі коментарі типу "order_note"
+    $wpdb->query("DELETE FROM {$wpdb->commentmeta} WHERE comment_id IN (SELECT comment_ID FROM {$wpdb->comments} WHERE comment_type = 'order_note')");
+    $wpdb->query("DELETE FROM {$wpdb->comments} WHERE comment_type = 'order_note'");
 }
 
+//INC: Function to delete all WooCommerce data
+require_once IP_WOO_CLEANER_PLUGIN_PATH . '/inc/remove-all-data-woo.php';
