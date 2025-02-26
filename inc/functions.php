@@ -4,15 +4,6 @@ if (!defined('ABSPATH')) {
     exit; // Prevent direct access
 }
 
-//FUNC: Check HPOS status
-// function ip_woo_check_hpos_status() {
-//     if (class_exists('\Automattic\WooCommerce\Utilities\OrderUtil') && \Automattic\WooCommerce\Utilities\OrderUtil::custom_orders_table_usage_is_enabled()) {
-//         return 'HPOS';
-//     } else {
-//         return 'pre-HPOS';
-//     }
-// }
-
 // FUNC: Check HPOS status
 function ip_woo_check_hpos_status() {
     if (class_exists('\Automattic\WooCommerce\Utilities\OrderUtil')) {
