@@ -354,6 +354,3 @@ function ip_woo_delete_orders_notes() {
     $wpdb->query("DELETE FROM {$wpdb->commentmeta} WHERE comment_id IN (SELECT comment_ID FROM {$wpdb->comments} WHERE comment_type = 'order_note')");
     $wpdb->query("DELETE FROM {$wpdb->comments} WHERE comment_type = 'order_note'");
 }
-
-//INC: Function to delete all WooCommerce data
-require_once IP_WOO_CLEANER_PLUGIN_PATH . '/inc/remove-all-data-woo.php';

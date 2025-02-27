@@ -80,57 +80,7 @@
                             <input type="submit" name="ip_woo_delete_orders_notes" class="button button-primary" value="<?php _e('Delete all order notes', 'ip-woo-cleaner'); ?>"
                             <?php echo ($order_notes_count === 0) ? 'disabled' : ''; ?>>
                         </div>
-                    </div>
-
-                    <div class="action_remove-all">
-                        <h2><?php _e('Delete all:', 'ip-woo-cleaner'); ?></h2>
-                        <div class="block-inner">
-                            <?php wp_nonce_field('ip_woo_delete_all_data_action', 'ip_woo_delete_all_data_nonce'); 
-                            
-                            $disable_button = (
-                                $attribute_count == 0 &&
-                                $archived_attribute_count == 0 &&
-                                $product_tags_count == 0 &&
-                                $coupons_count == 0 &&
-                                $orders_count == 0 &&
-                                $order_notes_count == 0 &&
-                                $trashed_product_count == 0 &&
-                                $product_count == 0 &&
-                                $product_category_count == 0) ? 'disabled' : '';                           
-                            ?>
-
-                            <input type="submit" name="ip_woo_delete_all_data" class="button button-primary" value="<?php _e('Delete all data', 'ip-woo-cleaner'); ?>" onclick="return confirm('<?php _e('WARNING: This will permanently delete all WooCommerce data from the database. This cannot be undone. Are you sure?', 'ip-woo-cleaner'); ?>');" <?php echo $disable_button; ?>>
-
-                            <?php
-                                // Функція перевіряє, чи є хоча б одна WooCommerce таблиця в БД
-                                function ip_woo_has_tables() {
-                                    global $wpdb;
-
-                                    // Підключаємо список таблиць
-                                    $tables = require_once IP_WOO_CLEANER_PLUGIN_PATH . '/inc/woo_tables_list.php';
-
-                                    // Отримуємо всі таблиці в базі даних
-                                    $existing_tables = $wpdb->get_col("SHOW TABLES LIKE '{$wpdb->prefix}%'");
-
-                                    // Перевіряємо, чи існує хоча б одна WooCommerce таблиця
-                                    foreach ($tables as $table) {
-                                        if (in_array($wpdb->prefix . $table, $existing_tables)) {
-                                            return true; // Якщо хоча б одна таблиця є — повертаємо true
-                                        }
-                                    }
-                                    return false; // Якщо жодної таблиці немає — повертаємо false
-                                }
-
-                                wp_nonce_field('ip_woo_delete_woocommerce_action', 'ip_woo_delete_woocommerce_nonce');
-                                $disable_button = ip_woo_has_tables() ? '' : 'disabled';
-                            ?>
-
-                            <input type="submit" name="ip_woo_delete_woocommerce" class="button button-primary" value="<?php _e('Delete WooCommerce', 'ip-woo-cleaner'); ?>" onclick="return confirm('<?php _e('WARNING: This will permanently delete all WooCommerce tables from the database. This cannot be undone. Are you sure?', 'ip-woo-cleaner'); ?>');" <?php echo $disable_button; ?>>
-                        </div>
-                    </div>
-
-
-                    
+                    </div>                 
 
                 </div>
             </form>
