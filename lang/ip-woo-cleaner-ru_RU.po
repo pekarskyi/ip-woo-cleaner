@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce Cleaner\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-20 11:42+0000\n"
-"PO-Revision-Date: 2025-02-21 18:05+0200\n"
+"PO-Revision-Date: 2025-02-27 01:09+0000\n"
 "Last-Translator: Mykola Pekarskyi <dizer7@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -12,31 +12,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
 "n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.7.1; wp-6.7.2\n"
 "X-Domain: ip-woo-cleaner\n"
 
-#: inc/functions.php:113
+#: inc/functions.php:159
 msgid "All coupons deleted!"
 msgstr "Все купоны удалены!"
 
-#: inc/functions.php:117
+#: inc/functions.php:163
 msgid "All order notes deleted!"
 msgstr "Все заметки о заказах удалены!"
 
-#: inc/functions.php:101
-msgid "All orders (HPOS) deleted!"
-msgstr "Все заказы (HPOS) удалены!"
+#: inc/functions.php:150
+msgid "All orders deleted!"
+msgstr "Все заказы удалены!"
 
-#: inc/functions.php:105
-msgid "All orders (pre-HPOS) deleted!"
-msgstr "Все заказы (pre-HPOS) удалены!"
-
-#: inc/functions.php:109
+#: inc/functions.php:155
 msgid "All trashed products deleted!"
 msgstr "Все товары в мусорнике удалены!"
 
-#: inc/section-info.php:45
+#: inc/sidebar.php:37
 msgid "author's website"
 msgstr "сайт автора, услуги, консультация"
 
@@ -56,17 +52,13 @@ msgstr "Удалить все категории"
 msgid "Delete all coupons"
 msgstr "Удалить все купоны"
 
-#: inc/html-output.php:89
+#: inc/html-output.php:80
 msgid "Delete all order notes"
 msgstr "Удалить все примечания"
 
 #: inc/html-output.php:77
-msgid "Delete all orders (HPOS)"
-msgstr "Удалить все заказы (HPOS)"
-
-#: inc/html-output.php:80
-msgid "Delete all orders (pre-HPOS)"
-msgstr "Удалить все заказы (pre-HPOS)"
+msgid "Delete all orders"
+msgstr "Удалить все заказы"
 
 #: inc/html-output.php:40
 msgid "Delete all products"
@@ -80,35 +72,40 @@ msgstr "Удалить все теги"
 msgid "Delete all trashed products"
 msgstr "Очистить мусорник"
 
-#: inc/section-info.php:27
+#: inc/sidebar.php:19
 msgid "description, FAQ and updates."
 msgstr "описание, часто задаваемые вопросы и обновления."
 
-#: inc/section-info.php:8
+#: inc/sidebar.php:8
 msgid "Disclaimer:"
 msgstr "Отказ от ответственности:"
 
-#: inc/section-info.php:21
+#: inc/sidebar.php:13
 msgid "Helpful Links:"
 msgstr "Полезные ссылки:"
 
 #. URI of the plugin
-msgid "https://github.com/pekarskyi/WooCommerce-Cleaner"
+#| msgid "https://github.com/pekarskyi/WooCommerce-Cleaner"
+msgid "https://github.com/pekarskyi/woo-cleaner"
 msgstr "https://github.com/pekarskyi/woo-cleaner"
 
 #. Author URI of the plugin
 msgid "https://inwebpress.com/"
 msgstr "https://inwebpress.com/"
 
-#: inc/section-info.php:43
+#: inc/sidebar.php:35
 msgid "InwebPress"
 msgstr "InwebPress"
+
+#: inc/functions.php:16
+msgid "Missing"
+msgstr "Отсутствует"
 
 #. Author of the plugin
 msgid "Mykola Pekarskyi"
 msgstr "Николай Пекарский"
 
-#: inc/html-output.php:86
+#: inc/html-output.php:73
 msgid "Order notes:"
 msgstr "Примечания к заказу:"
 
@@ -116,35 +113,23 @@ msgstr "Примечания к заказу:"
 msgid "Order storage type:"
 msgstr "Тип хранения заказов:"
 
-#: inc/html-output.php:72
-msgid "Orders in HPOS:"
-msgstr "Заказы в HPOS:"
-
-#: inc/html-output.php:73
-msgid "Orders in pre-HPOS:"
-msgstr "Заказы в pre-HPOS:"
-
-#: inc/html-output.php:69
+#: inc/html-output.php:69 inc/html-output.php:72
 msgid "Orders:"
 msgstr "Заказы:"
 
-#: inc/section-info.php:37
+#: inc/sidebar.php:29
 msgid "Pifagor Community"
 msgstr "Pifagor Community"
 
-#: inc/section-info.php:15
-msgid "Please note that this action cannot be undone."
-msgstr "Обратите внимание, что это действие нельзя отменить."
-
-#: inc/section-info.php:25
+#: inc/sidebar.php:17
 msgid "Plugin page on Github"
 msgstr "Страница плагина на Github"
 
-#: inc/functions.php:81
+#: inc/functions.php:130
 msgid "Product attributes deleted!"
 msgstr "Атрибуты товаров удалены!"
 
-#: inc/functions.php:85
+#: inc/functions.php:134
 msgid "Product attributes set to not Public!"
 msgstr "Атрибуты установлены как Не архивы!"
 
@@ -156,7 +141,7 @@ msgstr "Атрибуты товаров:"
 msgid "Product attributes:"
 msgstr "Атрибуты товаров:"
 
-#: inc/functions.php:93
+#: inc/functions.php:142
 msgid "Product categories deleted!"
 msgstr "Категории товаров удалены!"
 
@@ -164,7 +149,7 @@ msgstr "Категории товаров удалены!"
 msgid "Product Categories:"
 msgstr "Категории товаров:"
 
-#: inc/functions.php:89
+#: inc/functions.php:138
 msgid "Product tags deleted!"
 msgstr "Теги товаров удалены!"
 
@@ -176,7 +161,7 @@ msgstr "Теги товаров:"
 msgid "Product tags:"
 msgstr "Теги товаров:"
 
-#: inc/functions.php:97
+#: inc/functions.php:146
 msgid "Products deleted!"
 msgstr "Товары удалены!"
 
@@ -188,7 +173,7 @@ msgstr "Товары:"
 msgid "Public (archive) attributes:"
 msgstr "Атрибуты-архивы:"
 
-#: inc/section-info.php:33
+#: inc/sidebar.php:25
 msgid "recommended plugin for creating site backups."
 msgstr "рекомендуемый плагин для создания резервных копий сайта."
 
@@ -200,18 +185,15 @@ msgstr "Сделать атрибуты как не архивы"
 msgid "Settings"
 msgstr "Настройки"
 
-#: inc/section-info.php:9
+#: inc/sidebar.php:9
 msgid ""
-"The author of this plugin assumes no responsibility for any damages, data "
-"loss, or other unforeseen consequences arising from the use of this plugin. "
-"The use of this plugin is at the user&rsquo;s own risk. It is recommended to "
-"perform regular data backups before installing and using the plugin."
+"The author is not responsible for any losses, damages, or other consequences "
+"of using the plugin. You use it at your own risk. Creating backups is "
+"recommended!"
 msgstr ""
-"Автор данного плагина не несет ответственности за любой ущерб, потерю данных "
-"или другие непредвиденные последствия, возникшие в результате использования "
-"данного плагина. Использование этого плагина осуществляется на собственный "
-"риск пользователя. Перед установкой и использованием плагина рекомендуется "
-"регулярно выполнять резервное копирование данных."
+"Автор не несёт ответственности за потери, убытки или другие последствия "
+"использования плагина. Вы используете его на свой страх и риск. "
+"Рекомендуется делать резервные копии!"
 
 #. Description of the plugin
 msgid ""
@@ -220,7 +202,7 @@ msgid ""
 msgstr ""
 "Плагин удаляет атрибуты, теги, товары, категории и заказы в WooCommerce."
 
-#: inc/section-info.php:5
+#: inc/sidebar.php:5
 msgid ""
 "This plugin will help you to clean up your WooCommerce store by deleting "
 "unnecessary data."
@@ -232,7 +214,7 @@ msgstr ""
 msgid "Trashed products:"
 msgstr "Товары в мусорнике:"
 
-#: inc/section-info.php:39
+#: inc/sidebar.php:31
 msgid ""
 "Ukrainian Telegram community of WordPress site owners and developers. Join "
 "the Ukrainian WordPress community today!"
@@ -240,20 +222,10 @@ msgstr ""
 "Украинское Telegram-сообщество владельцев и разработчиков сайтов на "
 "WordPress. Присоединяйтесь к украинскому сообществу WordPress уже сегодня!"
 
-#: inc/section-info.php:13
-msgid "Warning:"
-msgstr "Внимание:"
-
-#: inc/section-info.php:16
-msgid "WARNING: Remember to back up your database before deleting any data!"
-msgstr ""
-"ВНИМАНИЕ: Не забудьте создать резервную копию базы данных перед удалением "
-"любых данных!"
-
 #. Name of the plugin
-msgid "WooCommerce Cleaner"
+msgid "Woo Cleaner"
 msgstr "Woo Cleaner"
 
-#: inc/section-info.php:31
+#: inc/sidebar.php:23
 msgid "WPvivid Backup & Migration"
 msgstr "WPvivid Backup & Migration"

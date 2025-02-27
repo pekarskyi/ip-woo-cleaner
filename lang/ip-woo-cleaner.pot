@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Cleaner\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-25 18:52+0000\n"
+"POT-Creation-Date: 2025-02-27 01:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,27 +16,23 @@ msgstr ""
 "X-Loco-Version: 2.7.1; wp-6.7.2\n"
 "X-Domain: ip-woo-cleaner"
 
-#: inc/functions.php:143
+#: inc/functions.php:159
 msgid "All coupons deleted!"
 msgstr ""
 
-#: inc/functions.php:147
+#: inc/functions.php:163
 msgid "All order notes deleted!"
 msgstr ""
 
-#: inc/functions.php:134
+#: inc/functions.php:150
 msgid "All orders deleted!"
 msgstr ""
 
-#: inc/functions.php:139
+#: inc/functions.php:155
 msgid "All trashed products deleted!"
 msgstr ""
 
-#: inc/remove-all-data-woo.php:30
-msgid "All WooCommerce data has been deleted successfully."
-msgstr ""
-
-#: inc/sidebar.php:46
+#: inc/sidebar.php:37
 msgid "author's website"
 msgstr ""
 
@@ -54,10 +50,6 @@ msgstr ""
 
 #: inc/html-output.php:63
 msgid "Delete all coupons"
-msgstr ""
-
-#: inc/html-output.php:89
-msgid "Delete all data"
 msgstr ""
 
 #: inc/html-output.php:80
@@ -80,15 +72,7 @@ msgstr ""
 msgid "Delete all trashed products"
 msgstr ""
 
-#: inc/html-output.php:86
-msgid "Delete all:"
-msgstr ""
-
-#: inc/html-output.php:92
-msgid "Delete WooCommerce"
-msgstr ""
-
-#: inc/sidebar.php:28
+#: inc/sidebar.php:19
 msgid "description, FAQ and updates."
 msgstr ""
 
@@ -96,7 +80,7 @@ msgstr ""
 msgid "Disclaimer:"
 msgstr ""
 
-#: inc/sidebar.php:22
+#: inc/sidebar.php:13
 msgid "Helpful Links:"
 msgstr ""
 
@@ -108,8 +92,12 @@ msgstr ""
 msgid "https://inwebpress.com/"
 msgstr ""
 
-#: inc/sidebar.php:44
+#: inc/sidebar.php:35
 msgid "InwebPress"
+msgstr ""
+
+#: inc/functions.php:16
+msgid "Missing"
 msgstr ""
 
 #. Author of the plugin
@@ -128,23 +116,19 @@ msgstr ""
 msgid "Orders:"
 msgstr ""
 
-#: inc/sidebar.php:38
+#: inc/sidebar.php:29
 msgid "Pifagor Community"
 msgstr ""
 
-#: inc/sidebar.php:15
-msgid "Please note that this action cannot be undone."
-msgstr ""
-
-#: inc/sidebar.php:26
+#: inc/sidebar.php:17
 msgid "Plugin page on Github"
 msgstr ""
 
-#: inc/functions.php:114
+#: inc/functions.php:130
 msgid "Product attributes deleted!"
 msgstr ""
 
-#: inc/functions.php:118
+#: inc/functions.php:134
 msgid "Product attributes set to not Public!"
 msgstr ""
 
@@ -156,7 +140,7 @@ msgstr ""
 msgid "Product attributes:"
 msgstr ""
 
-#: inc/functions.php:126
+#: inc/functions.php:142
 msgid "Product categories deleted!"
 msgstr ""
 
@@ -164,7 +148,7 @@ msgstr ""
 msgid "Product Categories:"
 msgstr ""
 
-#: inc/functions.php:122
+#: inc/functions.php:138
 msgid "Product tags deleted!"
 msgstr ""
 
@@ -176,7 +160,7 @@ msgstr ""
 msgid "Product tags:"
 msgstr ""
 
-#: inc/functions.php:130
+#: inc/functions.php:146
 msgid "Products deleted!"
 msgstr ""
 
@@ -188,7 +172,7 @@ msgstr ""
 msgid "Public (archive) attributes:"
 msgstr ""
 
-#: inc/sidebar.php:34
+#: inc/sidebar.php:25
 msgid "recommended plugin for creating site backups."
 msgstr ""
 
@@ -202,10 +186,9 @@ msgstr ""
 
 #: inc/sidebar.php:9
 msgid ""
-"The author of this plugin assumes no responsibility for any damages, data "
-"loss, or other unforeseen consequences arising from the use of this plugin. "
-"The use of this plugin is at the user&rsquo;s own risk. It is recommended to "
-"perform regular data backups before installing and using the plugin."
+"The author is not responsible for any losses, damages, or other consequences "
+"of using the plugin. You use it at your own risk. Creating backups is "
+"recommended!"
 msgstr ""
 
 #. Description of the plugin
@@ -224,40 +207,16 @@ msgstr ""
 msgid "Trashed products:"
 msgstr ""
 
-#: inc/sidebar.php:40
+#: inc/sidebar.php:31
 msgid ""
 "Ukrainian Telegram community of WordPress site owners and developers. Join "
 "the Ukrainian WordPress community today!"
-msgstr ""
-
-#: inc/sidebar.php:13
-msgid "Warning:"
-msgstr ""
-
-#: inc/sidebar.php:17
-msgid "WARNING: Remember to back up your database before deleting any data!"
-msgstr ""
-
-#: inc/html-output.php:89
-msgid ""
-"WARNING: This will permanently delete all WooCommerce data from the database."
-" This cannot be undone. Are you sure?"
-msgstr ""
-
-#: inc/html-output.php:92
-msgid ""
-"WARNING: This will permanently delete all WooCommerce tables from the "
-"database. This cannot be undone. Are you sure?"
 msgstr ""
 
 #. Name of the plugin
 msgid "Woo Cleaner"
 msgstr ""
 
-#: inc/remove-all-data-woo.php:118
-msgid "WooCommerce has been completely removed."
-msgstr ""
-
-#: inc/sidebar.php:32
+#: inc/sidebar.php:23
 msgid "WPvivid Backup & Migration"
 msgstr ""
