@@ -28,7 +28,7 @@ Need translations into other languages? – Feel free to reach out!
 [Click to view](https://www.youtube.com/watch?v=H0NKspNEVmY)
 
 ## ✅ Screenshots
-![https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner.jpg](https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner.jpg)
+![https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner-1.1.jpg](https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner-1.1.jpg)
 
 ## ✅ How to install
 
