@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce Cleaner v1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-20 11:33+0000\n"
-"PO-Revision-Date: 2025-02-25 18:55+0000\n"
+"PO-Revision-Date: 2025-02-27 01:07+0000\n"
 "Last-Translator: Mykola Pekarskyi <dizer7@gmail.com>\n"
 "Language-Team: Українська\n"
 "Language: uk\n"
@@ -22,27 +22,23 @@ msgstr ""
 "X-Loco-Version: 2.7.1; wp-6.7.2\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: inc/functions.php:143
+#: inc/functions.php:159
 msgid "All coupons deleted!"
 msgstr "Всі купони видалено!"
 
-#: inc/functions.php:147
+#: inc/functions.php:163
 msgid "All order notes deleted!"
 msgstr "Всі примітки до замовлень видалено!"
 
-#: inc/functions.php:134
+#: inc/functions.php:150
 msgid "All orders deleted!"
 msgstr "Всі замовлення видалено!"
 
-#: inc/functions.php:139
+#: inc/functions.php:155
 msgid "All trashed products deleted!"
 msgstr "Всі товари в смітнику видалено!"
 
-#: inc/remove-all-data-woo.php:30
-msgid "All WooCommerce data has been deleted successfully."
-msgstr "Усі дані WooCommerce успішно видалено."
-
-#: inc/sidebar.php:46
+#: inc/sidebar.php:37
 msgid "author's website"
 msgstr "сайт автора, послуги, консультація"
 
@@ -61,10 +57,6 @@ msgstr "Видалити всі категорії"
 #: inc/html-output.php:63
 msgid "Delete all coupons"
 msgstr "Видалити всі купони"
-
-#: inc/html-output.php:89
-msgid "Delete all data"
-msgstr "Видалити всі дані"
 
 #: inc/html-output.php:80
 msgid "Delete all order notes"
@@ -86,15 +78,7 @@ msgstr "Видалити всі теги"
 msgid "Delete all trashed products"
 msgstr "Очистити смітник"
 
-#: inc/html-output.php:86
-msgid "Delete all:"
-msgstr "Видалити все:"
-
-#: inc/html-output.php:92
-msgid "Delete WooCommerce"
-msgstr "Видалити WooCommerce"
-
-#: inc/sidebar.php:28
+#: inc/sidebar.php:19
 msgid "description, FAQ and updates."
 msgstr "опис, поширені запитання та оновлення."
 
@@ -102,12 +86,11 @@ msgstr "опис, поширені запитання та оновлення."
 msgid "Disclaimer:"
 msgstr "Відмова від відповідальності:"
 
-#: inc/sidebar.php:22
+#: inc/sidebar.php:13
 msgid "Helpful Links:"
 msgstr "Корисні посилання:"
 
 #. URI of the plugin
-#, fuzzy
 #| msgid "https://github.com/pekarskyi/WooCommerce-Cleaner"
 msgid "https://github.com/pekarskyi/woo-cleaner"
 msgstr "https://github.com/pekarskyi/woo-cleaner"
@@ -116,9 +99,13 @@ msgstr "https://github.com/pekarskyi/woo-cleaner"
 msgid "https://inwebpress.com/"
 msgstr "https://inwebpress.com/"
 
-#: inc/sidebar.php:44
+#: inc/sidebar.php:35
 msgid "InwebPress"
 msgstr "InwebPress"
+
+#: inc/functions.php:16
+msgid "Missing"
+msgstr "Відсутнє"
 
 #. Author of the plugin
 msgid "Mykola Pekarskyi"
@@ -136,23 +123,19 @@ msgstr "Сховище даних замовлень:"
 msgid "Orders:"
 msgstr "Замовлення:"
 
-#: inc/sidebar.php:38
+#: inc/sidebar.php:29
 msgid "Pifagor Community"
 msgstr "Pifagor Community"
 
-#: inc/sidebar.php:15
-msgid "Please note that this action cannot be undone."
-msgstr "Зверніть увагу, що цю дію неможливо скасувати."
-
-#: inc/sidebar.php:26
+#: inc/sidebar.php:17
 msgid "Plugin page on Github"
 msgstr "Сторінка плагіна на Github"
 
-#: inc/functions.php:114
+#: inc/functions.php:130
 msgid "Product attributes deleted!"
 msgstr "Атрибути товарів видалено!"
 
-#: inc/functions.php:118
+#: inc/functions.php:134
 msgid "Product attributes set to not Public!"
 msgstr "Атрибути стали як Не архіви!"
 
@@ -164,7 +147,7 @@ msgstr "Атрибути товарів:"
 msgid "Product attributes:"
 msgstr "Атрибути товарів:"
 
-#: inc/functions.php:126
+#: inc/functions.php:142
 msgid "Product categories deleted!"
 msgstr "Категорії товарів видалено!"
 
@@ -172,7 +155,7 @@ msgstr "Категорії товарів видалено!"
 msgid "Product Categories:"
 msgstr "Категорії товарів:"
 
-#: inc/functions.php:122
+#: inc/functions.php:138
 msgid "Product tags deleted!"
 msgstr "Позначки товарів видалено!"
 
@@ -184,7 +167,7 @@ msgstr "Позначки товарів:"
 msgid "Product tags:"
 msgstr "Позначки товарів:"
 
-#: inc/functions.php:130
+#: inc/functions.php:146
 msgid "Products deleted!"
 msgstr "Товари видалено!"
 
@@ -196,7 +179,7 @@ msgstr "Товари:"
 msgid "Public (archive) attributes:"
 msgstr "Атрибути-архіви:"
 
-#: inc/sidebar.php:34
+#: inc/sidebar.php:25
 msgid "recommended plugin for creating site backups."
 msgstr "рекомендований плагін для створення резервних копій сайтів."
 
@@ -210,16 +193,13 @@ msgstr "Налаштування"
 
 #: inc/sidebar.php:9
 msgid ""
-"The author of this plugin assumes no responsibility for any damages, data "
-"loss, or other unforeseen consequences arising from the use of this plugin. "
-"The use of this plugin is at the user&rsquo;s own risk. It is recommended to "
-"perform regular data backups before installing and using the plugin."
+"The author is not responsible for any losses, damages, or other consequences "
+"of using the plugin. You use it at your own risk. Creating backups is "
+"recommended!"
 msgstr ""
-"Автор цього плагіна не несе відповідальності за будь-які збитки, втрату "
-"даних або інші непередбачувані наслідки, пов'язані з використанням цього "
-"плагіна. Використання цього плагіна відбувається на власний ризик "
-"користувача. Рекомендується регулярно створювати резервні копії даних перед "
-"встановленням та використанням плагіна."
+"Автор не несе відповідальності за втрати, збитки чи інші наслідки "
+"використання плагіна. Ви використовуєте його на власний ризик. "
+"Рекомендується робити резервні копії!"
 
 #. Description of the plugin
 msgid ""
@@ -240,7 +220,7 @@ msgstr ""
 msgid "Trashed products:"
 msgstr "Товари в смітнику:"
 
-#: inc/sidebar.php:40
+#: inc/sidebar.php:31
 msgid ""
 "Ukrainian Telegram community of WordPress site owners and developers. Join "
 "the Ukrainian WordPress community today!"
@@ -248,39 +228,10 @@ msgstr ""
 "Українська Telegram-спільнота власників та розробників сайтів на WordPress. "
 "Приєднуйтесь до української спільноти WordPress вже сьогодні!"
 
-#: inc/sidebar.php:13
-msgid "Warning:"
-msgstr "Увага:"
-
-#: inc/sidebar.php:17
-msgid "WARNING: Remember to back up your database before deleting any data!"
-msgstr ""
-"УВАГА: Не забудьте створити резервну копію бази даних перед видаленням даних!"
-
-#: inc/html-output.php:89
-msgid ""
-"WARNING: This will permanently delete all WooCommerce data from the database."
-" This cannot be undone. Are you sure?"
-msgstr ""
-"УВАГА: Це призведе до остаточного видалення всіх даних WooCommerce з бази "
-"даних. Це неможливо скасувати. Ви впевнені?"
-
-#: inc/html-output.php:92
-msgid ""
-"WARNING: This will permanently delete all WooCommerce tables from the "
-"database. This cannot be undone. Are you sure?"
-msgstr ""
-"УВАГА: Це призведе до остаточного видалення всіх таблиць WooCommerce з бази "
-"даних. Це неможливо скасувати. Ви впевнені?"
-
 #. Name of the plugin
 msgid "Woo Cleaner"
 msgstr "Woo Cleaner"
 
-#: inc/remove-all-data-woo.php:118
-msgid "WooCommerce has been completely removed."
-msgstr "WooCommerce було повністю видалено."
-
-#: inc/sidebar.php:32
+#: inc/sidebar.php:23
 msgid "WPvivid Backup & Migration"
 msgstr "WPvivid Backup & Migration"
