@@ -4,18 +4,9 @@
     
     <p><strong><?php _e('This plugin will help you to clean up your WooCommerce store by deleting unnecessary data.', 'ip-woo-cleaner'); ?></strong></p>
     
-    <div class="disclaimer_sidebar-block">
-        <h3><?php _e('Disclaimer:', 'ip-woo-cleaner'); ?></h3>
-        <?php _e('The author of this plugin assumes no responsibility for any damages, data loss, or other unforeseen consequences arising from the use of this plugin. The use of this plugin is at the user&rsquo;s own risk. It is recommended to perform regular data backups before installing and using the plugin.', 'ip-woo-cleaner'); ?>
-    </div>
-    
     <div class="warning_sidebar-block">
-        <h3><?php _e('Warning:', 'ip-woo-cleaner'); ?></h3>
-        <?php
-            _e('Please note that this action cannot be undone.', 'ip-woo-cleaner');
-            echo '<br>';
-            _e('WARNING: Remember to back up your database before deleting any data!', 'ip-woo-cleaner');
-        ?>
+        <h3><?php _e('Disclaimer:', 'ip-woo-cleaner'); ?></h3>
+        <?php _e('The author is not responsible for any losses, damages, or other consequences of using the plugin. You use it at your own risk. Creating backups is recommended!', 'ip-woo-cleaner'); ?>
     </div>
 
     <div class="helpful_sidebar-block">

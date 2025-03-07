@@ -28,7 +28,7 @@ Need translations into other languages? – Feel free to reach out!
 [Click to view](https://www.youtube.com/watch?v=H0NKspNEVmY)
 
 ## ✅ Screenshots
-![https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner.jpg](https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner.jpg)
+![https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner-1.1.jpg](https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner-1.1.jpg)
 
 ## ✅ How to install
 
@@ -46,16 +46,6 @@ Need translations into other languages? – Feel free to reach out!
 3. Activate the Plugin
 - After installation, click **Activate Plugin** to start using it.
 
-
-**Alternative: Install via FTP**
-
-If you prefer using FTP:
-
-1. Extract the ZIP file to get the plugin folder.
-2. Connect to your website using an FTP client (like FileZilla).
-3. Upload the plugin folder to /wp-content/plugins/.
-4. Go to WordPress Admin → Plugins and activate the plugin.
-
 Now the plugin should be active and ready to use! 🚀
 
 ## ✅ ENG description
@@ -72,7 +62,7 @@ Woo Cleaner – a simple plugin for cleaning the database from products, categor
 ## 🚀 Roadmap
 👨 We'll come up with something interesting together. Feel free to suggest!
 
-## ✅ Список змін
+## ✅ Changelog
 
 **Версія 1.1 - 27.02.2025:**
 - Покращено механізм перерахунку замовлень та їх повного видалення
