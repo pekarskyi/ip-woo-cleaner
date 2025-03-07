@@ -80,7 +80,23 @@
                             <input type="submit" name="ip_woo_delete_orders_notes" class="button button-primary" value="<?php _e('Delete all order notes', 'ip-woo-cleaner'); ?>"
                             <?php echo ($order_notes_count === 0) ? 'disabled' : ''; ?>>
                         </div>
-                    </div>                 
+                    </div>
+                    
+                    <div class="action_actionscheduler">
+                        <h2><?php _e('Action scheduler:', 'ip-woo-cleaner'); ?></h2>
+
+                        <ul>
+                            <li><?php _e('Actions complete:', 'ip-woo-cleaner'); ?> <?php echo $actions_complete_count; ?></li>
+                            <li><?php _e('Actions failed:', 'ip-woo-cleaner'); ?> <?php echo $actions_failed_count; ?></li>
+                            <li><?php _e('Actions pending:', 'ip-woo-cleaner'); ?> <?php echo $actions_pending_count; ?></li>
+                        </ul>
+
+                        <div class="block-inner">
+                            <input type="submit" name="ip_woo_delete_actions_complete" class="button button-primary" value="<?php _e('Delete all complete', 'ip-woo-cleaner'); ?>" <?php echo ($actions_complete_count === 0) ? 'disabled' : ''; ?>>
+
+                            <input type="submit" name="ip_woo_delete_actions_failed" class="button button-primary" value="<?php _e('Delete all failed', 'ip-woo-cleaner'); ?>" <?php echo ($actions_failed_count === 0) ? 'disabled' : ''; ?>>
+                        </div>                       
+                    </div>
 
                 </div>
             </form>
