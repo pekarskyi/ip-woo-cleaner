@@ -189,6 +189,16 @@ function ip_woo_admin_page() {
         echo '<div class="updated"><p>' . __('All order notes deleted!', 'ip-woo-cleaner') . '</p></div>';
     }
 
+    if (isset($_POST['ip_woo_delete_actions_complete'])) {
+        ip_woo_delete_actions_complete();
+        echo '<div class="updated"><p>' . __('Completed actions deleted!', 'ip-woo-cleaner') . '</p></div>';
+    }
+
+    if (isset($_POST['ip_woo_delete_actions_failed'])) {
+        ip_woo_delete_actions_failed();
+        echo '<div class="updated"><p>' . __('Failed actions deleted!', 'ip-woo-cleaner') . '</p></div>';
+    }
+
     //Variables
     $hpos_status = ip_woo_check_hpos_status();
     $attribute_count = ip_woo_count_attributes(); // Get the number of attributes

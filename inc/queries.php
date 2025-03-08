@@ -164,6 +164,7 @@ function ip_woo_delete_orders_notes() {
     $wpdb->query("DELETE FROM {$wpdb->comments} WHERE comment_type = 'order_note'");
 }
 
+//SQL: Function to delete all logs and actions from Action Scheduler
 function ip_woo_delete_actions_complete() {
     global $wpdb;
     
@@ -177,17 +178,18 @@ function ip_woo_delete_actions_complete() {
             INNER JOIN {$wpdb->prefix}actionscheduler_actions AS actions
             ON logs.action_id = actions.action_id
             WHERE actions.status = 'complete'
-            LIMIT 1000
         ");
+        error_log('Видалено логів (complete): ' . $logs_deleted);
         
         // Видаляємо самі екшени
         $actions_deleted = $wpdb->query("
             DELETE FROM {$wpdb->prefix}actionscheduler_actions 
             WHERE status = 'complete'
-            LIMIT 1000
         ");
+        error_log('Видалено дій (complete): ' . $actions_deleted);
         
         $wpdb->query('COMMIT');
+        error_log('Транзакцію підтверджено (COMMIT)');
         
         return array(
             'logs_deleted' => $logs_deleted,
@@ -195,6 +197,7 @@ function ip_woo_delete_actions_complete() {
         );
     } catch (Exception $e) {
         $wpdb->query('ROLLBACK');
+        error_log('ROLLBACK транзакції через помилку');
         error_log('Помилка видалення завершених дій: ' . $e->getMessage());
         return false;
     }
@@ -213,17 +216,18 @@ function ip_woo_delete_actions_failed() {
             INNER JOIN {$wpdb->prefix}actionscheduler_actions AS actions
             ON logs.action_id = actions.action_id
             WHERE actions.status = 'failed'
-            LIMIT 1000
         ");
+        error_log('Видалено логів (failed): ' . $logs_deleted);
         
         // Видаляємо самі екшени
         $actions_deleted = $wpdb->query("
             DELETE FROM {$wpdb->prefix}actionscheduler_actions 
             WHERE status = 'failed'
-            LIMIT 1000
         ");
+        error_log('Видалено дій (failed): ' . $actions_deleted);
         
         $wpdb->query('COMMIT');
+        error_log('Транзакцію підтверджено (COMMIT)');
         
         return array(
             'logs_deleted' => $logs_deleted,
@@ -231,6 +235,7 @@ function ip_woo_delete_actions_failed() {
         );
     } catch (Exception $e) {
         $wpdb->query('ROLLBACK');
+        error_log('ROLLBACK транзакції через помилку');
         error_log('Помилка видалення невдалих дій: ' . $e->getMessage());
         return false;
     }

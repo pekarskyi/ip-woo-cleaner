@@ -83,7 +83,7 @@
                     </div>
                     
                     <div class="action_actionscheduler">
-                        <h2><?php _e('Action scheduler:', 'ip-woo-cleaner'); ?></h2>
+                        <h2><?php _e('Actions scheduler:', 'ip-woo-cleaner'); ?></h2>
 
                         <ul>
                             <li><?php _e('Actions complete:', 'ip-woo-cleaner'); ?> <?php echo $actions_complete_count; ?></li>
@@ -92,9 +92,9 @@
                         </ul>
 
                         <div class="block-inner">
-                            <input type="submit" name="ip_woo_delete_actions_complete" class="button button-primary" value="<?php _e('Delete all complete', 'ip-woo-cleaner'); ?>" <?php echo ($actions_complete_count === 0) ? 'disabled' : ''; ?>>
+                            <input type="submit" name="ip_woo_delete_actions_complete" class="button button-primary" value="<?php _e('Delete all completed', 'ip-woo-cleaner'); ?>" <?php echo ((int)$actions_complete_count === 0) ? 'disabled' : ''; ?>>
 
-                            <input type="submit" name="ip_woo_delete_actions_failed" class="button button-primary" value="<?php _e('Delete all failed', 'ip-woo-cleaner'); ?>" <?php echo ($actions_failed_count === 0) ? 'disabled' : ''; ?>>
+                            <input type="submit" name="ip_woo_delete_actions_failed" class="button button-primary" value="<?php _e('Delete all failed', 'ip-woo-cleaner'); ?>" <?php echo ((int)$actions_failed_count === 0) ? 'disabled' : ''; ?>>              
                         </div>                       
                     </div>
 
