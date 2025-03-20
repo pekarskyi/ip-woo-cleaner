@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Cleaner\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-20 13:59+0000\n"
+"POT-Creation-Date: 2025-02-27 01:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,44 +16,24 @@ msgstr ""
 "X-Loco-Version: 2.7.1; wp-6.7.2\n"
 "X-Domain: ip-woo-cleaner"
 
-#: inc/html-output.php:89
-msgid "Actions complete:"
-msgstr ""
-
-#: inc/html-output.php:90
-msgid "Actions failed:"
-msgstr ""
-
-#: inc/html-output.php:91
-msgid "Actions pending:"
-msgstr ""
-
-#: inc/html-output.php:86
-msgid "Actions scheduler:"
-msgstr ""
-
-#: inc/functions.php:185
+#: inc/functions.php:159
 msgid "All coupons deleted!"
 msgstr ""
 
-#: inc/functions.php:189
+#: inc/functions.php:163
 msgid "All order notes deleted!"
 msgstr ""
 
-#: inc/functions.php:176
+#: inc/functions.php:150
 msgid "All orders deleted!"
 msgstr ""
 
-#: inc/functions.php:181
+#: inc/functions.php:155
 msgid "All trashed products deleted!"
 msgstr ""
 
 #: inc/sidebar.php:37
 msgid "author's website"
-msgstr ""
-
-#: inc/functions.php:194
-msgid "Completed actions deleted!"
 msgstr ""
 
 #: inc/html-output.php:58 inc/html-output.php:61
@@ -68,16 +48,8 @@ msgstr ""
 msgid "Delete all categories"
 msgstr ""
 
-#: inc/html-output.php:95
-msgid "Delete all completed"
-msgstr ""
-
 #: inc/html-output.php:63
 msgid "Delete all coupons"
-msgstr ""
-
-#: inc/html-output.php:97
-msgid "Delete all failed"
 msgstr ""
 
 #: inc/html-output.php:80
@@ -106,10 +78,6 @@ msgstr ""
 
 #: inc/sidebar.php:8
 msgid "Disclaimer:"
-msgstr ""
-
-#: inc/functions.php:199
-msgid "Failed actions deleted!"
 msgstr ""
 
 #: inc/sidebar.php:13
@@ -156,11 +124,11 @@ msgstr ""
 msgid "Plugin page on Github"
 msgstr ""
 
-#: inc/functions.php:156
+#: inc/functions.php:130
 msgid "Product attributes deleted!"
 msgstr ""
 
-#: inc/functions.php:160
+#: inc/functions.php:134
 msgid "Product attributes set to not Public!"
 msgstr ""
 
@@ -172,7 +140,7 @@ msgstr ""
 msgid "Product attributes:"
 msgstr ""
 
-#: inc/functions.php:168
+#: inc/functions.php:142
 msgid "Product categories deleted!"
 msgstr ""
 
@@ -180,7 +148,7 @@ msgstr ""
 msgid "Product Categories:"
 msgstr ""
 
-#: inc/functions.php:164
+#: inc/functions.php:138
 msgid "Product tags deleted!"
 msgstr ""
 
@@ -192,7 +160,7 @@ msgstr ""
 msgid "Product tags:"
 msgstr ""
 
-#: inc/functions.php:172
+#: inc/functions.php:146
 msgid "Products deleted!"
 msgstr ""
 
@@ -212,7 +180,7 @@ msgstr ""
 msgid "Set all attributes as Not public"
 msgstr ""
 
-#: woo-cleaner.php:38
+#: woo-cleaner.php:37
 msgid "Settings"
 msgstr ""
 
