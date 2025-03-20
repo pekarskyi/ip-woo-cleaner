@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Cleaner\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-20 13:59+0000\n"
+"POT-Creation-Date: 2025-03-20 15:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,19 +16,19 @@ msgstr ""
 "X-Loco-Version: 2.7.1; wp-6.7.2\n"
 "X-Domain: ip-woo-cleaner"
 
-#: inc/html-output.php:89
+#: inc/main-output.php:89
 msgid "Actions complete:"
 msgstr ""
 
-#: inc/html-output.php:90
+#: inc/main-output.php:90
 msgid "Actions failed:"
 msgstr ""
 
-#: inc/html-output.php:91
+#: inc/main-output.php:91
 msgid "Actions pending:"
 msgstr ""
 
-#: inc/html-output.php:86
+#: inc/main-output.php:86
 msgid "Actions scheduler:"
 msgstr ""
 
@@ -56,47 +56,47 @@ msgstr ""
 msgid "Completed actions deleted!"
 msgstr ""
 
-#: inc/html-output.php:58 inc/html-output.php:61
+#: inc/main-output.php:58 inc/main-output.php:61
 msgid "Coupons:"
 msgstr ""
 
-#: inc/html-output.php:25
+#: inc/main-output.php:25
 msgid "Delete all attributes"
 msgstr ""
 
-#: inc/html-output.php:12
+#: inc/main-output.php:12
 msgid "Delete all categories"
 msgstr ""
 
-#: inc/html-output.php:95
+#: inc/main-output.php:95
 msgid "Delete all completed"
 msgstr ""
 
-#: inc/html-output.php:63
+#: inc/main-output.php:63
 msgid "Delete all coupons"
 msgstr ""
 
-#: inc/html-output.php:97
+#: inc/main-output.php:97
 msgid "Delete all failed"
 msgstr ""
 
-#: inc/html-output.php:80
+#: inc/main-output.php:80
 msgid "Delete all order notes"
 msgstr ""
 
-#: inc/html-output.php:77
+#: inc/main-output.php:77
 msgid "Delete all orders"
 msgstr ""
 
-#: inc/html-output.php:40
+#: inc/main-output.php:40
 msgid "Delete all products"
 msgstr ""
 
-#: inc/html-output.php:52
+#: inc/main-output.php:52
 msgid "Delete all tags"
 msgstr ""
 
-#: inc/html-output.php:42
+#: inc/main-output.php:42
 msgid "Delete all trashed products"
 msgstr ""
 
@@ -136,15 +136,15 @@ msgstr ""
 msgid "Mykola Pekarskyi"
 msgstr ""
 
-#: inc/html-output.php:73
+#: inc/main-output.php:73
 msgid "Order notes:"
 msgstr ""
 
-#: inc/html-output.php:71
+#: inc/main-output.php:71
 msgid "Order storage type:"
 msgstr ""
 
-#: inc/html-output.php:69 inc/html-output.php:72
+#: inc/main-output.php:69 inc/main-output.php:72
 msgid "Orders:"
 msgstr ""
 
@@ -164,11 +164,11 @@ msgstr ""
 msgid "Product attributes set to not Public!"
 msgstr ""
 
-#: inc/html-output.php:17
+#: inc/main-output.php:17
 msgid "Product Attributes:"
 msgstr ""
 
-#: inc/html-output.php:20
+#: inc/main-output.php:20
 msgid "Product attributes:"
 msgstr ""
 
@@ -176,7 +176,7 @@ msgstr ""
 msgid "Product categories deleted!"
 msgstr ""
 
-#: inc/html-output.php:5 inc/html-output.php:8
+#: inc/main-output.php:5 inc/main-output.php:8
 msgid "Product Categories:"
 msgstr ""
 
@@ -184,11 +184,11 @@ msgstr ""
 msgid "Product tags deleted!"
 msgstr ""
 
-#: inc/html-output.php:47
+#: inc/main-output.php:47
 msgid "Product Tags:"
 msgstr ""
 
-#: inc/html-output.php:50
+#: inc/main-output.php:50
 msgid "Product tags:"
 msgstr ""
 
@@ -196,11 +196,11 @@ msgstr ""
 msgid "Products deleted!"
 msgstr ""
 
-#: inc/html-output.php:32 inc/html-output.php:35
+#: inc/main-output.php:32 inc/main-output.php:35
 msgid "Products:"
 msgstr ""
 
-#: inc/html-output.php:21
+#: inc/main-output.php:21
 msgid "Public (archive) attributes:"
 msgstr ""
 
@@ -208,7 +208,7 @@ msgstr ""
 msgid "recommended plugin for creating site backups."
 msgstr ""
 
-#: inc/html-output.php:26
+#: inc/main-output.php:26
 msgid "Set all attributes as Not public"
 msgstr ""
 
@@ -235,14 +235,12 @@ msgid ""
 "unnecessary data."
 msgstr ""
 
-#: inc/html-output.php:36
+#: inc/main-output.php:36
 msgid "Trashed products:"
 msgstr ""
 
 #: inc/sidebar.php:31
-msgid ""
-"Ukrainian Telegram community of WordPress site owners and developers. Join "
-"the Ukrainian WordPress community today!"
+msgid "Ukrainian Telegram community of WordPress site owners and developers."
 msgstr ""
 
 #. Name of the plugin

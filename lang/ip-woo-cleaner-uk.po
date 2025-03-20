@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce Cleaner v1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-20 11:33+0000\n"
-"PO-Revision-Date: 2025-03-20 14:04+0000\n"
+"PO-Revision-Date: 2025-03-20 15:43+0000\n"
 "Last-Translator: Mykola Pekarskyi <dizer7@gmail.com>\n"
 "Language-Team: Українська\n"
 "Language: uk\n"
@@ -22,19 +22,19 @@ msgstr ""
 "X-Loco-Version: 2.7.1; wp-6.7.2\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: inc/html-output.php:89
+#: inc/main-output.php:89
 msgid "Actions complete:"
 msgstr "Виконані:"
 
-#: inc/html-output.php:90
+#: inc/main-output.php:90
 msgid "Actions failed:"
 msgstr "Не вдалося:"
 
-#: inc/html-output.php:91
+#: inc/main-output.php:91
 msgid "Actions pending:"
 msgstr "Очікує перевірки:"
 
-#: inc/html-output.php:86
+#: inc/main-output.php:86
 msgid "Actions scheduler:"
 msgstr "Заплановані дії"
 
@@ -62,47 +62,47 @@ msgstr "сайт автора, послуги, консультація"
 msgid "Completed actions deleted!"
 msgstr "Виконані дії видалено!"
 
-#: inc/html-output.php:58 inc/html-output.php:61
+#: inc/main-output.php:58 inc/main-output.php:61
 msgid "Coupons:"
 msgstr "Купони:"
 
-#: inc/html-output.php:25
+#: inc/main-output.php:25
 msgid "Delete all attributes"
 msgstr "Видалити всі атрибути"
 
-#: inc/html-output.php:12
+#: inc/main-output.php:12
 msgid "Delete all categories"
 msgstr "Видалити всі категорії"
 
-#: inc/html-output.php:95
+#: inc/main-output.php:95
 msgid "Delete all completed"
 msgstr "Видалити всі виконані"
 
-#: inc/html-output.php:63
+#: inc/main-output.php:63
 msgid "Delete all coupons"
 msgstr "Видалити всі купони"
 
-#: inc/html-output.php:97
+#: inc/main-output.php:97
 msgid "Delete all failed"
 msgstr "Видалити всі невдалі"
 
-#: inc/html-output.php:80
+#: inc/main-output.php:80
 msgid "Delete all order notes"
 msgstr "Видалити всі примітки"
 
-#: inc/html-output.php:77
+#: inc/main-output.php:77
 msgid "Delete all orders"
 msgstr "Видалити всі замовлення"
 
-#: inc/html-output.php:40
+#: inc/main-output.php:40
 msgid "Delete all products"
 msgstr "Видалити всі товари"
 
-#: inc/html-output.php:52
+#: inc/main-output.php:52
 msgid "Delete all tags"
 msgstr "Видалити всі теги"
 
-#: inc/html-output.php:42
+#: inc/main-output.php:42
 msgid "Delete all trashed products"
 msgstr "Очистити смітник"
 
@@ -143,15 +143,15 @@ msgstr "Відсутнє"
 msgid "Mykola Pekarskyi"
 msgstr "Микола Пекарський"
 
-#: inc/html-output.php:73
+#: inc/main-output.php:73
 msgid "Order notes:"
 msgstr "Примітки до замовлення:"
 
-#: inc/html-output.php:71
+#: inc/main-output.php:71
 msgid "Order storage type:"
 msgstr "Сховище даних замовлень:"
 
-#: inc/html-output.php:69 inc/html-output.php:72
+#: inc/main-output.php:69 inc/main-output.php:72
 msgid "Orders:"
 msgstr "Замовлення:"
 
@@ -171,11 +171,11 @@ msgstr "Атрибути товарів видалено!"
 msgid "Product attributes set to not Public!"
 msgstr "Атрибути стали як Не архіви!"
 
-#: inc/html-output.php:17
+#: inc/main-output.php:17
 msgid "Product Attributes:"
 msgstr "Атрибути товарів:"
 
-#: inc/html-output.php:20
+#: inc/main-output.php:20
 msgid "Product attributes:"
 msgstr "Атрибути товарів:"
 
@@ -183,7 +183,7 @@ msgstr "Атрибути товарів:"
 msgid "Product categories deleted!"
 msgstr "Категорії товарів видалено!"
 
-#: inc/html-output.php:5 inc/html-output.php:8
+#: inc/main-output.php:5 inc/main-output.php:8
 msgid "Product Categories:"
 msgstr "Категорії товарів:"
 
@@ -191,11 +191,11 @@ msgstr "Категорії товарів:"
 msgid "Product tags deleted!"
 msgstr "Позначки товарів видалено!"
 
-#: inc/html-output.php:47
+#: inc/main-output.php:47
 msgid "Product Tags:"
 msgstr "Позначки товарів:"
 
-#: inc/html-output.php:50
+#: inc/main-output.php:50
 msgid "Product tags:"
 msgstr "Позначки товарів:"
 
@@ -203,11 +203,11 @@ msgstr "Позначки товарів:"
 msgid "Products deleted!"
 msgstr "Товари видалено!"
 
-#: inc/html-output.php:32 inc/html-output.php:35
+#: inc/main-output.php:32 inc/main-output.php:35
 msgid "Products:"
 msgstr "Товари:"
 
-#: inc/html-output.php:21
+#: inc/main-output.php:21
 msgid "Public (archive) attributes:"
 msgstr "Атрибути-архіви:"
 
@@ -215,7 +215,7 @@ msgstr "Атрибути-архіви:"
 msgid "recommended plugin for creating site backups."
 msgstr "рекомендований плагін для створення резервних копій сайтів."
 
-#: inc/html-output.php:26
+#: inc/main-output.php:26
 msgid "Set all attributes as Not public"
 msgstr "Зробити атрибути як не архіви"
 
@@ -248,17 +248,14 @@ msgstr ""
 "Цей плагін допоможе вам очистити ваш магазин WooCommerce, видаливши "
 "непотрібні дані."
 
-#: inc/html-output.php:36
+#: inc/main-output.php:36
 msgid "Trashed products:"
 msgstr "Товари в смітнику:"
 
 #: inc/sidebar.php:31
-msgid ""
-"Ukrainian Telegram community of WordPress site owners and developers. Join "
-"the Ukrainian WordPress community today!"
+msgid "Ukrainian Telegram community of WordPress site owners and developers."
 msgstr ""
-"Українська Telegram-спільнота власників та розробників сайтів на WordPress. "
-"Приєднуйтесь до української спільноти WordPress вже сьогодні!"
+"Українська Telegram-спільнота власників та розробників сайтів на WordPress."
 
 #. Name of the plugin
 msgid "Woo Cleaner"
