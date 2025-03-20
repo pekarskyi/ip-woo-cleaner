@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce Cleaner v1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-20 11:33+0000\n"
-"PO-Revision-Date: 2025-02-27 01:07+0000\n"
+"PO-Revision-Date: 2025-03-20 14:04+0000\n"
 "Last-Translator: Mykola Pekarskyi <dizer7@gmail.com>\n"
 "Language-Team: Українська\n"
 "Language: uk\n"
@@ -22,25 +22,45 @@ msgstr ""
 "X-Loco-Version: 2.7.1; wp-6.7.2\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: inc/functions.php:159
+#: inc/html-output.php:89
+msgid "Actions complete:"
+msgstr "Виконані:"
+
+#: inc/html-output.php:90
+msgid "Actions failed:"
+msgstr "Не вдалося:"
+
+#: inc/html-output.php:91
+msgid "Actions pending:"
+msgstr "Очікує перевірки:"
+
+#: inc/html-output.php:86
+msgid "Actions scheduler:"
+msgstr "Заплановані дії"
+
+#: inc/functions.php:185
 msgid "All coupons deleted!"
 msgstr "Всі купони видалено!"
 
-#: inc/functions.php:163
+#: inc/functions.php:189
 msgid "All order notes deleted!"
 msgstr "Всі примітки до замовлень видалено!"
 
-#: inc/functions.php:150
+#: inc/functions.php:176
 msgid "All orders deleted!"
 msgstr "Всі замовлення видалено!"
 
-#: inc/functions.php:155
+#: inc/functions.php:181
 msgid "All trashed products deleted!"
 msgstr "Всі товари в смітнику видалено!"
 
 #: inc/sidebar.php:37
 msgid "author's website"
 msgstr "сайт автора, послуги, консультація"
+
+#: inc/functions.php:194
+msgid "Completed actions deleted!"
+msgstr "Виконані дії видалено!"
 
 #: inc/html-output.php:58 inc/html-output.php:61
 msgid "Coupons:"
@@ -54,9 +74,17 @@ msgstr "Видалити всі атрибути"
 msgid "Delete all categories"
 msgstr "Видалити всі категорії"
 
+#: inc/html-output.php:95
+msgid "Delete all completed"
+msgstr "Видалити всі виконані"
+
 #: inc/html-output.php:63
 msgid "Delete all coupons"
 msgstr "Видалити всі купони"
+
+#: inc/html-output.php:97
+msgid "Delete all failed"
+msgstr "Видалити всі невдалі"
 
 #: inc/html-output.php:80
 msgid "Delete all order notes"
@@ -85,6 +113,10 @@ msgstr "опис, поширені запитання та оновлення."
 #: inc/sidebar.php:8
 msgid "Disclaimer:"
 msgstr "Відмова від відповідальності:"
+
+#: inc/functions.php:199
+msgid "Failed actions deleted!"
+msgstr "Невдалі дії видалено!"
 
 #: inc/sidebar.php:13
 msgid "Helpful Links:"
@@ -131,11 +163,11 @@ msgstr "Pifagor Community"
 msgid "Plugin page on Github"
 msgstr "Сторінка плагіна на Github"
 
-#: inc/functions.php:130
+#: inc/functions.php:156
 msgid "Product attributes deleted!"
 msgstr "Атрибути товарів видалено!"
 
-#: inc/functions.php:134
+#: inc/functions.php:160
 msgid "Product attributes set to not Public!"
 msgstr "Атрибути стали як Не архіви!"
 
@@ -147,7 +179,7 @@ msgstr "Атрибути товарів:"
 msgid "Product attributes:"
 msgstr "Атрибути товарів:"
 
-#: inc/functions.php:142
+#: inc/functions.php:168
 msgid "Product categories deleted!"
 msgstr "Категорії товарів видалено!"
 
@@ -155,7 +187,7 @@ msgstr "Категорії товарів видалено!"
 msgid "Product Categories:"
 msgstr "Категорії товарів:"
 
-#: inc/functions.php:138
+#: inc/functions.php:164
 msgid "Product tags deleted!"
 msgstr "Позначки товарів видалено!"
 
@@ -167,7 +199,7 @@ msgstr "Позначки товарів:"
 msgid "Product tags:"
 msgstr "Позначки товарів:"
 
-#: inc/functions.php:146
+#: inc/functions.php:172
 msgid "Products deleted!"
 msgstr "Товари видалено!"
 
@@ -187,7 +219,7 @@ msgstr "рекомендований плагін для створення ре
 msgid "Set all attributes as Not public"
 msgstr "Зробити атрибути як не архіви"
 
-#: woo-cleaner.php:37
+#: woo-cleaner.php:38
 msgid "Settings"
 msgstr "Налаштування"
 
