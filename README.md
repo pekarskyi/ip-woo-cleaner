@@ -28,7 +28,7 @@ Need translations into other languages? – Feel free to reach out!
 [Click to view](https://www.youtube.com/watch?v=H0NKspNEVmY)
 
 ## ✅ Screenshots
-![https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner-1.1.jpg](https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner-1.1.jpg)
+![https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner-1-3.jpg](https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner-1-3.jpg)
 
 ## ✅ How to install
 
@@ -66,6 +66,9 @@ Woo Cleaner – a simple plugin for cleaning the database from products, categor
 
 **Версія 1.3 - 08.03.2025:**
 - ADDED: очищення БД від виконаних та помилкових Actions Scheduler.
+- FIXED: класи CSS та неймінг
+- IMPROVED: інтерфейс плагіна
+- UPDATED: локалізація
 
 **Версія 1.2 - 08.03.2025:**
 - FIXED: кастомні префікси Бази даних.
