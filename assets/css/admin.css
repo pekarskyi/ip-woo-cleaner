@@ -5,9 +5,10 @@
     justify-content: space-between;
     margin-top: 20px;
     padding: 20px;
+    font-size: 14px;
 }
 
-.section_actions {
+.ipwc-section_actions {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -15,7 +16,7 @@
     gap: 20px;
 }
 
-[class*="action_"] {
+[class*="ipwc-action_"] {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -28,33 +29,52 @@
     justify-content: flex-start;
 }
 
-.block-inner {
+.ipwc-block-inner {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 100%;
 }
 
-[class*="action_"] h2 {
+[class*="ipwc-action_"] h2 {
     background: #E5E5E5;
     margin: 0px;
     padding: 10px;
     width: 90%;
 }
 
-[class*="action_"] ul {
+[class*="ipwc-action_"] ul {
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
+.ipwc-section_actions .button-primary {
+    font-size: 14px;
+    background: #007CBA;
+    color: #FFF;
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.ipwc-section_actions .button-primary:hover {
+    background: #FFBA00;
+    color: #000;
+    border: 1px solid #FFBA00;
+}
+
 /*--- Sidebar ---*/
-.section_information {
+.ipwc-section_information {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     width: 30%;
     margin-bottom: 0px;
 }
 
-.section_information h1 {
-    line-height: 1.2;
+.ipwc-section_information h1 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0px;
+    padding: 0px;
 }
 
 [class*="_sidebar-block"] {
@@ -63,7 +83,6 @@
     gap: 10px;
     max-width: 400px;
     padding: 15px;
-    margin: 10px 0px 10px 0px;
 }
 
 [class*="_sidebar-block"] h3 {
@@ -75,22 +94,22 @@
     padding-bottom: 5px;
 }
 
-.disclaimer_sidebar-block {
-    border: 1px dashed #EC9329;
-    background: #FCF3E7;
+.ipwc-disclaimer_sidebar-block {
+    background-color: #fcf9e8;
+    border-left: 4px solid #ffba00;
 }
 
-.warning_sidebar-block {
-    border: 1px dashed #C62013;
-    background: #F8E6E4;
+.ipwc-warning_sidebar-block {
+    background-color: #fcf9e8;
+    border-left: 4px solid #ffba00;
 }
 
-.helpful_sidebar-block {
-    border: 1px dashed #106b28;
-    background: #E4EEE7;
+.ipwc-helpful_sidebar-block {
+    background-color: #EBF5F9;
+    border-left: 4px solid #007cba;
 }
 
-.helpful_sidebar-block a[href*="github.com"]:before {
+.ipwc-helpful_sidebar-block a[href*="github.com"]:before {
     content: '';
     background: url('../images/github-logo.svg') no-repeat 100% 50%;
     background-size: 19px;
@@ -98,7 +117,7 @@
     margin-right: 3px;
 }
 
-.helpful_sidebar-block a[href*="wordpress.org"]:before {
+.ipwc-helpful_sidebar-block a[href*="wordpress.org"]:before {
     content: '';
     background: url('../images/wp-logo.png') no-repeat 100% 50%;
     background-size: 17px;
@@ -106,7 +125,7 @@
     margin-right: 3px;
 }
 
-.helpful_sidebar-block a[href*="inwebpress.com"]:before {
+.ipwc-helpful_sidebar-block a[href*="inwebpress.com"]:before {
     content: '';
     background: url('../images/inwebpress-logo.png') no-repeat 100% 50%;
     background-size: 17px;
@@ -114,10 +133,14 @@
     margin-right: 3px;
 }
 
-.helpful_sidebar-block a[href*="t.me"]:before {
+.ipwc-helpful_sidebar-block a[href*="t.me"]:before {
     content: '';
     background: url('../images/telegram-logo.png') no-repeat 100% 50%;
     background-size: 17px;
     padding-right: 20px;
     margin-right: 3px;
+}
+
+.ipwc-standwithua_sidebar-block {
+    text-align: center;
 }

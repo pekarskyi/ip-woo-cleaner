@@ -123,6 +123,32 @@ function ip_woo_count_product_categories() {
     return (int) $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}term_taxonomy WHERE taxonomy = 'product_cat'");
 }
 
+//FUNC: Count Failed Actions
+function ip_woo_count_failed_actions() {
+    global $wpdb;
+    return $wpdb->get_var(
+        "SELECT COUNT(*) FROM {$wpdb->prefix}actionscheduler_actions WHERE status = 'failed'"
+    );
+}
+
+//FUNC: Count Completed Actions
+function ip_woo_count_completed_actions() {
+    global $wpdb;
+    return $wpdb->get_var(
+        "SELECT COUNT(*) FROM {$wpdb->prefix}actionscheduler_actions WHERE status = 'complete'"
+    );
+}
+
+//FUNC: Count Pending Actions
+function ip_woo_count_pending_actions() {
+    global $wpdb;
+    return $wpdb->get_var(
+        "SELECT COUNT(*) FROM {$wpdb->prefix}actionscheduler_actions WHERE status = 'pending'"
+    );
+}
+
+
+
 //FUNC: Output Info notices
 function ip_woo_admin_page() {
     if (isset($_POST['ip_woo_delete_attributes'])) {
@@ -163,6 +189,16 @@ function ip_woo_admin_page() {
         echo '<div class="updated"><p>' . __('All order notes deleted!', 'ip-woo-cleaner') . '</p></div>';
     }
 
+    if (isset($_POST['ip_woo_delete_actions_complete'])) {
+        ip_woo_delete_actions_complete();
+        echo '<div class="updated"><p>' . __('Completed actions deleted!', 'ip-woo-cleaner') . '</p></div>';
+    }
+
+    if (isset($_POST['ip_woo_delete_actions_failed'])) {
+        ip_woo_delete_actions_failed();
+        echo '<div class="updated"><p>' . __('Failed actions deleted!', 'ip-woo-cleaner') . '</p></div>';
+    }
+
     //Variables
     $hpos_status = ip_woo_check_hpos_status();
     $attribute_count = ip_woo_count_attributes(); // Get the number of attributes
@@ -174,6 +210,9 @@ function ip_woo_admin_page() {
     $trashed_product_count = ip_woo_count_trashed_products(); // Get the number of trashed products
     $product_count = ip_woo_count_products(); // Count Products
     $product_category_count = ip_woo_count_product_categories(); // Count Product Categories
+    $actions_failed_count = ip_woo_count_failed_actions();
+    $actions_complete_count = ip_woo_count_completed_actions();
+    $actions_pending_count = ip_woo_count_pending_actions();
     ?>
 
         <!-- HTML: Output content for the page -->
