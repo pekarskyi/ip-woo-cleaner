@@ -1,6 +1,6 @@
 ![https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner_youtube.jpg](https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner_youtube.jpg)
 
-# Woo Cleaner
+# IP Woo Cleaner
 
 Woo Cleaner – простий плагін для очищення бази даних від товарів, категорій, атрибутів, міток, купонів, замовлень і приміток до них.
 

@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name:       Woo Cleaner
+ * Plugin Name:       IP Woo Cleaner
  * Plugin URI:        https://github.com/pekarskyi/woo-cleaner
  * Description:       The plugin deletes attributes, tags, products, categories, and orders in WooCommerce.
  * Version:           1.3
@@ -23,8 +23,8 @@ define('IP_WOO_CLEANER_PLUGIN_VERSION', '1.3');
 //FUNC: Add page to admin menu
 function ip_woo_add_admin_menu() {
     add_menu_page(
-        'Woo Cleaner',
-        'Woo Cleaner',
+        'IP Woo Cleaner',
+        'IP Woo Cleaner',
         'manage_options',
         'woo-cleaner',
         'ip_woo_admin_page'
