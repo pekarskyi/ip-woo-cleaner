@@ -1,6 +1,6 @@
 <div class="ipwc-section_information">
     
-    <?php echo '<h1>Woo Cleaner ' . IP_WOO_CLEANER_PLUGIN_VERSION . '</h1>'; ?>
+    <?php echo '<h1>IP Woo Cleaner ' . IP_WOO_CLEANER_PLUGIN_VERSION . '</h1>'; ?>
     
     <p><?php _e('This plugin will help you to clean up your WooCommerce store by deleting unnecessary data.', 'ip-woo-cleaner'); ?></p>
     
