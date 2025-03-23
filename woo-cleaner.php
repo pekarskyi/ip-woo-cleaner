@@ -3,7 +3,7 @@
  * Plugin Name:       IP Woo Cleaner
  * Plugin URI:        https://github.com/pekarskyi/ip-woo-cleaner
  * Description:       The plugin deletes attributes, tags, products, categories, and orders in WooCommerce.
- * Version:           1.3.0
+ * Version:           1.4.0
  * Requires at least: 6.7.1
  * Requires PHP:      8.0
  * Author:            Mykola Pekarskyi
@@ -18,7 +18,7 @@ if( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 define( 'IP_WOO_CLEANER_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 define( 'IP_WOO_CLEANER_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-define('IP_WOO_CLEANER_PLUGIN_VERSION', '1.3');
+define('IP_WOO_CLEANER_PLUGIN_VERSION', '1.4.0');
 
 //FUNC: Add page to admin menu
 function ip_woo_add_admin_menu() {
@@ -58,9 +58,12 @@ load_plugin_textdomain( 'ip-woo-cleaner', false, dirname( plugin_basename( __FIL
 
 // Adding update check via GitHub
 require_once plugin_dir_path( __FILE__ ) . 'updates/github-updater.php';
-wp_github_updater_init(
-    __FILE__,       // Plugin file path
-    'pekarskyi',     // Your GitHub username
-	'ip-woo-cleaner' // Repository name (optional)
-    // Other parameters are determined automatically
-); 
+if ( function_exists( 'ip_woo_cleaner_github_updater_init' ) ) {
+    ip_woo_cleaner_github_updater_init(
+        __FILE__,       // Plugin file path
+        'pekarskyi',     // Your GitHub username
+        '',              // Access token (empty)
+        'ip-woo-cleaner' // Repository name (optional)
+        // Other parameters are determined automatically
+    );
+} 

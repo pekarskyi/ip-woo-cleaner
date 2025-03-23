@@ -64,6 +64,9 @@ Woo Cleaner – a simple plugin for cleaning the database from products, categor
 
 ## ✅ Changelog
 
+**Версія 1.4 - 23.03.2025:**
+- ADDED: функція перевірки версії та оновлення плагіна
+
 **Версія 1.3 - 08.03.2025:**
 - ADDED: очищення БД від виконаних та помилкових Actions Scheduler.
 - FIXED: класи CSS та неймінг
