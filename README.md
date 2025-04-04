@@ -37,8 +37,8 @@ IP Woo Cleaner – простий плагін для очищення бази 
 3. Активуйте плагін.
 
 ### Варіант №2 (рекомендований):
-Встановіть та активуйте даний плагін (інсталятор плагінів): https://github.com/pekarskyi/ip-installer
-За допомогою плагіна `IP Installer` встановіть та активуйте плагін IP Woo Cleaner.
+- Встановіть та активуйте даний плагін (інсталятор плагінів): https://github.com/pekarskyi/ip-installer
+- За допомогою плагіна `IP Installer` встановіть та активуйте плагін IP Woo Cleaner.
 
 ## ✅ ENG description
 
