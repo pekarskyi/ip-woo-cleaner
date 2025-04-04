@@ -22,8 +22,6 @@ IP Woo Cleaner – простий плагін для очищення бази 
 - English
 - Русский
 
-Need translations into other languages? – Feel free to reach out!
-
 ## ✅ Відео
 [Click to view](https://www.youtube.com/watch?v=H0NKspNEVmY)
 
@@ -44,7 +42,7 @@ Need translations into other languages? – Feel free to reach out!
 
 ## ✅ ENG description
 
-Woo Cleaner – a simple plugin for cleaning the database from products, categories, attributes, tags, coupons, orders, and their notes.
+Woo Cleaner – a simple WordPress plugin for cleaning up the database by removing products, categories, attributes, tags, coupons, orders, and order notes.
 
 ## ✅ Practical use cases:
 - Quickly clean up your site after importing products, without having to reinstall WordPress.
@@ -58,7 +56,7 @@ Woo Cleaner – a simple plugin for cleaning the database from products, categor
 
 ## ✅ Changelog
 
-**Версія 1.4.1 - 23.03.2025:**
+**Версія 1.4.1 - 04.04.2025:**
 - UPDATE: покращено функцію оновлення плагіна.
 
 **Версія 1.4.0 - 23.03.2025:**
