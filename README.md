@@ -16,37 +16,31 @@ IP Woo Cleaner – простий плагін для очищення бази 
 
 ❓ Залишайте свої відгуки, запитання, пропозиції та ідеї в розділі - [Issues](https://github.com/pekarskyi/woo-cleaner/issues)
 
-## ✅ Languages
+## ✅ Мови
 
-- Ukrainian
+- Українська
 - English
-- Russian
+- Русский
 
 Need translations into other languages? – Feel free to reach out!
 
-## ✅ Video
+## ✅ Відео
 [Click to view](https://www.youtube.com/watch?v=H0NKspNEVmY)
 
-## ✅ Screenshots
+## ✅ Скріншоти
 ![https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner-1-3.jpg](https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner-1-3.jpg)
 
-## ✅ How to install
+## Встановлення
 
-1. Download the Plugin
-- Go to the GitHub repository of the plugin.
-- Click on the **Code button** (green dropdown).
-- Select **Download ZIP** and save the file to your computer.
+### Варіант №1:
 
-2. Upload the Plugin to WordPress
-- Log in to your WordPress admin dashboard.
-- Go to Plugins → Add New.
-- Click the **Upload Plugin** button at the top.
-- Click Choose File, select the ZIP file you downloaded, and click Install Now.
+1. Завантажте плагін `IP Woo Cleaner` (зелена кнопка Code - Download ZIP).
+2. Завантажте його на ваш сайт WordPress. Переконайтесь, що папка плагіна має назву `ip-woo-cleaner` (назва на роботу плагіна не впливає, але це впливає на отримання подальших оновлень).
+3. Активуйте плагін.
 
-3. Activate the Plugin
-- After installation, click **Activate Plugin** to start using it.
-
-Now the plugin should be active and ready to use! 🚀
+### Варіант №2 (рекомендований):
+Встановіть та активуйте даний плагін (інсталятор плагінів): https://github.com/pekarskyi/ip-installer
+За допомогою плагіна `IP Installer` встановіть та активуйте плагін IP Woo Cleaner.
 
 ## ✅ ENG description
 
@@ -64,22 +58,25 @@ Woo Cleaner – a simple plugin for cleaning the database from products, categor
 
 ## ✅ Changelog
 
-**Версія 1.4 - 23.03.2025:**
+**Версія 1.4.1 - 23.03.2025:**
+- UPDATE: покращено функцію оновлення плагіна.
+
+**Версія 1.4.0 - 23.03.2025:**
 - ADDED: функція перевірки версії та оновлення плагіна
 
-**Версія 1.3 - 08.03.2025:**
+**Версія 1.3.0 - 08.03.2025:**
 - ADDED: очищення БД від виконаних та помилкових Actions Scheduler.
 - FIXED: класи CSS та неймінг
 - IMPROVED: інтерфейс плагіна
 - UPDATED: локалізація
 
-**Версія 1.2 - 08.03.2025:**
+**Версія 1.2.0 - 08.03.2025:**
 - FIXED: кастомні префікси Бази даних.
 
-**Версія 1.1 - 27.02.2025:**
+**Версія 1.1.0 - 27.02.2025:**
 - IMPROVED: Покращено механізм перерахунку замовлень та їх повного видалення.
 
-**Версія 1.0 - 21.02.2025:**
+**Версія 1.0.0 - 21.02.2025:**
 - ADDED: Відображає кількість різних об'єктів (записів, таксономій тощо)
 - ADDED: Видалення товарів
 - ADDED: Видалення категорій товарів
