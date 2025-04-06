@@ -2,92 +2,50 @@
 
 # IP Woo Cleaner
 
-IP Woo Cleaner – простий плагін для очищення бази даних від товарів, категорій, атрибутів, міток, купонів, замовлень і приміток до них.
+IP Woo Cleaner – a simple plugin for cleaning the database of products, categories, attributes, tags, coupons, orders, and their notes.
+
+[Читати опис українською](https://github.com/pekarskyi/ip-woo-cleaner/blob/master/README_UA.md) <img src="https://github.com/pekarskyi/assets/raw/master/flags/ua.svg" width="17">
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/pekarskyi/woo-cleaner?style=for-the-badge)](https://GitHub.com/pekarskyi/woo-cleaner/releases/)
 
-### ✅ Практичне застосування:
-- Швидке очищення сайту після імпорту товарів, без необхідності перевстановлення WordPress.
-- Видалення демо-даних після встановлення теми.
-- Очищення БД після деактивації і видалення плагіну WooCommerce.
+## Practical applications:
+- Quick cleaning of the site after importing products, without the need to reinstall WordPress.
+- Removal of demo data after theme installation.
+- Cleaning the database after deactivating and removing the WooCommerce plugin.
 
-Плагін створив в першу чергу під свої завдання, але потім подумав: "а можливо, він стане в нагоді і іншим користувачам WordPress/WooCommerce".
-Користуйтесь, тестуйте. Буду радий вашим відгукам та ідеям щодо розширення його функціоналу.
+I created this plugin primarily for my own tasks, but then thought: "maybe it will be useful for other WordPress/WooCommerce users as well."
+Feel free to use it and test it. I will be happy to receive your feedback and ideas for expanding its functionality.
 
-❓ Залишайте свої відгуки, запитання, пропозиції та ідеї в розділі - [Issues](https://github.com/pekarskyi/woo-cleaner/issues)
+❓ Leave your feedback, questions, suggestions, and ideas in the [Issues](https://github.com/pekarskyi/woo-cleaner/issues) section
 
-## ✅ Мови
+## Localization
 
-- Українська
+- Ukrainian
 - English
-- Русский
+- Russian
 
-## ✅ Відео
+## Video
 [Click to view](https://www.youtube.com/watch?v=H0NKspNEVmY)
 
-## ✅ Скріншоти
+## Screenshots
 ![https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner-1-3.jpg](https://github.com/pekarskyi/assets/raw/master/woo-cleaner/woo-cleaner-1-3.jpg)
 
-## Встановлення
+## Installation
 
-### Варіант №1:
+### Option #1:
 
-1. Завантажте плагін `IP Woo Cleaner` (зелена кнопка Code - Download ZIP).
-2. Встановіть його на вашому сайті WordPress. Переконайтесь, що папка плагіна має назву `ip-woo-cleaner` (назва на роботу плагіна не впливає, але це впливає на отримання подальших оновлень).
-3. Активуйте плагін.
+1. Download the `IP Woo Cleaner` plugin (green Code button - Download ZIP). Unpack the archive.
+2. Upload the plugin folder to your WordPress site in the '/wp-content/plugins/' directory. Make sure the plugin folder is named `ip-woo-cleaner` (the name does not affect the plugin's operation, but it does affect receiving future updates).
+3. Activate the plugin.
 
-### Варіант №2 (рекомендований):
-- Встановіть та активуйте даний плагін (інсталятор плагінів): https://github.com/pekarskyi/ip-installer
-- За допомогою плагіна `IP Installer` встановіть та активуйте плагін IP Woo Cleaner.
+### Option #2 (recommended):
 
-## ✅ ENG description
+1. Install and activate this plugin (plugin installer): https://github.com/pekarskyi/ip-installer
+2. Use the `IP Installer` plugin to install and activate the `IP Woo Cleaner` plugin.
 
-Woo Cleaner – a simple WordPress plugin for cleaning up the database by removing products, categories, attributes, tags, coupons, orders, and order notes.
+## Changelog
 
-## ✅ Practical use cases:
-- Quickly clean up your site after importing products, without having to reinstall WordPress.
-- Remove demo data after installing a theme.
-- Database cleanup after deactivating and deleting the WooCommerce plugin.
-
-❓ Leave your reviews, questions, suggestions, and ideas in the section - [Issues](https://github.com/pekarskyi/woo-cleaner/issues)
-
-## 🚀 Roadmap
-👨 We'll come up with something interesting together. Feel free to suggest!
-
-## ✅ Changelog
-
-**Версія 1.4.1 - 04.04.2025:**
-- UPDATE: покращено функцію оновлення плагіна.
-
-**Версія 1.4.0 - 23.03.2025:**
-- ADDED: функція перевірки версії та оновлення плагіна
-
-**Версія 1.3.0 - 08.03.2025:**
-- ADDED: очищення БД від виконаних та помилкових Actions Scheduler.
-- FIXED: класи CSS та неймінг
-- IMPROVED: інтерфейс плагіна
-- UPDATED: локалізація
-
-**Версія 1.2.0 - 08.03.2025:**
-- FIXED: кастомні префікси Бази даних.
-
-**Версія 1.1.0 - 27.02.2025:**
-- IMPROVED: Покращено механізм перерахунку замовлень та їх повного видалення.
-
-**Версія 1.0.0 - 21.02.2025:**
-- ADDED: Відображає кількість різних об'єктів (записів, таксономій тощо)
-- ADDED: Видалення товарів
-- ADDED: Видалення категорій товарів
-- ADDED: Видалення атрибутів товарів
-- ADDED: Зняття атрибутів товарів з архіву
-- ADDED: Видалення міток товарів
-- ADDED: Видалення купонів
-- ADDED: Видалення замовлень
-- ADDED: Видалення приміток до замовлень
-- ADDED: Підтримка локалізації (українська, англійська, російська)
-
-👨Subscribe to my YouTube channel!
+1.0.0 - 06.04.2025:
+- Initial release
 
 [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UC9ZEeT6WrGupgza9KXpazyA)](https://www.youtube.com/@inwebpress/videos)
-
-[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://justgo.ink/standwithukraine)
